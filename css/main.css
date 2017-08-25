@@ -112,12 +112,11 @@ textarea {
     }
 
     * {
-        // font-family: 'Source Sans Pro', sans-serif;
-        // font-family: 'Khula', sans-serif;
-        // font-family: 'Mukta Mahee', sans-serif;
-        // font-family: 'Montserrat', sans-serif;
+        /* font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'Khula', sans-serif;
+        font-family: 'Mukta Mahee', sans-serif;
+        font-family: 'Montserrat', sans-serif; */
         font-family: 'Open Sans', sans-serif;
-        // font-family: 'Interface', sans-serif;
     }
 
     h1, h2 {
@@ -157,6 +156,8 @@ textarea {
         justify-content: center;
         flex-direction: column;
         color: white;
+        /*below fixes container size on laptop screens*/
+        padding: 3.8rem 0rem; 
     }
 
     .block, header, .block2, .block3 {
@@ -183,6 +184,7 @@ textarea {
         font-weight: 200;
         margin-top: 0;
         color: rgba(255,255,255,.65);
+        text-align: right;
     }
 
     .stats h2 {
@@ -259,13 +261,13 @@ textarea {
     .menu li {
         display: inline;
         margin-left: 2rem;
-        transition: all .1s ease;
+        transition: all .15s ease;
         padding: .38rem;
     }
 
     .menu li:hover {
         border-bottom: 3.2px solid var(--mainRed);
-        transition: all .1s ease;
+        transition: all .15s ease;
     }
 
     .menu a {
@@ -297,18 +299,17 @@ textarea {
         height: 70%;
     }
 
-    // .tablet::before {
-    //     content: '';
-    //     left: 50%;
-    //     width: 12px;
-    //     height: 12px;
-    //     background-color: #3B3B3B;
-    //     border-radius: 50%;
-    //     position: absolute;
-    //     top: 36px;
-    //     margin-left: -6px;
-
-    // }
+    .tablet::before {
+        content: '';
+        left: 50%;
+        width: 12px;
+        height: 12px;
+        background-color: #3B3B3B;
+        border-radius: 50%;
+        position: absolute;
+        top: 36px;
+        margin-left: -6px;
+     }
 
     .stats_centered {
         width: 62%;
@@ -342,6 +343,19 @@ textarea {
         color: white;
         background: var(--mainRed);
         transition: all .32s ease-out;
+    }
+
+    .tools h2 {
+        margin-bottom: 0;
+        margin-top: 3.23rem;
+        font-size: 77px;
+        line-height: .01;
+        color: rgba(255,255,255,.15);
+    }
+
+    .tools p {
+        margin-top: 0;
+        font-size: 17px;
     }
 
     .tools ul {
@@ -380,7 +394,7 @@ textarea {
     }
 
     .learnMoreBtn:hover {
-        border-bottom: 3.2px solid white;
+        border-bottom: 3.2px solid var(--yeller);
         transition: all .1s linear;
     }
 
@@ -403,28 +417,13 @@ textarea {
         box-shadow: 0 20px 50px 0 rgba(0,0,0,.05),0 4px 8px 0 rgba(0,0,0,.18),0 20px 40px 0 rgba(0,0,0,.21);
     }
 
-    .tools h2 {
-        margin-bottom: 0;
-        margin-top: 3.23rem;
-        font-size: 77px;
-        line-height: .01;
-        color: rgba(255,255,255,.15);
-
-    }
     .fa-long-arrow-right {
         margin-left: .85rem;
-    }
-
-    .tools p {
-        margin-top: 0;
-        font-size: 19.2px;
-
     }
 
     .content, .content2, .content3 {
         width: 100%;
         height: 100%;
-        // position: absolute;
     }
 
     .content {
@@ -484,6 +483,7 @@ textarea {
     }
     .block3 h1 {
         font-size: 38px;
+        margin-bottom: 0;
     }
 
     .block3 button {
@@ -501,9 +501,6 @@ textarea {
         transition: all .32s ease-out;
     }
 
-    .header_wrap {
-        // display: flex;
-    }
 
     .block3_computerWrap {
         flex-grow: 1;
@@ -511,18 +508,26 @@ textarea {
         justify-content: center;
 
     }
+
     .block3_header {
         flex-grow: 1;
         display: flex;
         justify-content: center;
-        align-items: center;
+    }
+
+    .header_wrap {
+        margin-top: 1.9rem;
+    }
+
+    .header_wrap p {
+        margin-top: .38rem;
     }
 
     .quote_container {
         width: 85%;
-        padding: 3.32rem;
-        right: 3.32rem;
         position: relative;
+        flex-grow: 1;
+        margin: 1.23rem 0rem 0rem 1.23rem;
     }
 
     .quote_container p {
@@ -559,27 +564,176 @@ textarea {
     }
 
     .block2 h1 {
-        font-size: 58px;
-        margin-top: 4.8rem;
+        /*laptop below*/
+        /* font-size: 58px;
+        margin-top: 4.8rem; */
+        /*monitor*/
+        font-size: 77px;
+        margin-top: 7rem;
     }
 
     .block2 {
         display: flex;
+        /*laptop*/
+        /* height: 128%; */
+        /*monitor*/
+        height: 115%;
+    }
+
+    .centerQuotes {
+        display: flex;
+        flex-direction: column;
     }
 
     .quotes {
         display: flex;
         align-content: center;
         align-items: center;
+        /* flex-direction: column; */
     }
 
     .quotes a {
         font-size: 21px;
         text-decoration: none;
         color: var(--mainRed);
+        margin-left: 3.21rem;
+        transition: all .15s ease;
+        padding-bottom: .38rem;
     }
 
-    
+    .quotes a:hover {
+        border-bottom: 3.2px solid var(--mainRed);
+        transition: all .15s ease;
+    }
+
+    .projectWrap {
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+        /*laptop*/
+        margin-top: 3.32rem;
+    }
+
+    .formItem {
+        display: block;
+    }
+
+    .contact {
+        height: 80%;
+    }
+
+    .contactWrap {
+        display: flex;
+    }
+
+    .contactForm {
+        border-radius: 23px;
+        box-shadow: 0 20px 50px 0 rgba(0,0,0,.05),0 4px 8px 0 rgba(0,0,0,.18),0 20px 40px 0 rgba(0,0,0,.21);
+        width: 38%;
+        padding: 2.23rem;
+        position: relative;
+        /*laptop below*/
+        top: -9.2rem;
+        /*monitor*/
+        top: -12.8rem;
+        margin-left: 6.2rem;
+        background: white;
+    }
+
+    .contactForm h2 {
+        font-size: 32px;
+    }
+
+    .contactForm textarea {
+        height: 9.2rem;
+    }
+
+    .contactForm input, .contactForm textarea {
+        display: block;
+        border: 1.9px solid rgba(0,0,0,.18);
+        border-radius: 5.2px;
+        padding: .62rem;
+    }
+
+    .contactForm input:focus, .contactForm textarea:focus {
+        border: 2.1px solid var(--yeller);
+    }
+
+    .contactForm input[name="email"], .contactForm textarea {
+        width: 100%;
+    }
+
+    .contactForm button {
+        padding: var(--buttonPad);
+        background: var(--mainRed);
+        font-size: 19px;
+        border: none;
+        border-radius: 5.2px;
+        margin-top: 1.23rem;
+        font-weight: 600;
+        color: white;
+        transition: all .2s ease;
+    }
+
+    .contactForm button:hover {
+        background: var(--yeller);
+        transition: all .2s ease;
+    }
+
+    .beg {
+        position: relative;
+        max-width: 38%;
+        margin: 3.8rem 1.9rem 1.9rem 5.2rem;
+        /*laptop below*/
+        /* top: -3.8rem;  */
+        /*big monitor*/
+        top: -4.2rem; 
+    }
+
+    .beg h4 {
+        text-align: right;
+        margin-bottom: 9.2rem;
+    }
+
+    .beg h2 {
+        margin-bottom: 0;
+        margin-top: 3.23rem;
+        /*laptop*/
+        /* font-size: 62px; */
+        /*monitor*/
+        font-size: 70px;
+        line-height: .01;
+        color: rgba(0, 0, 0, 0.05);
+    }
+
+    .beg p {
+        margin-top: 0;
+        font-size: 23px;
+    }
+
+    footer {
+        width: 100%;
+        padding: 3.8rem 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .socialWrap i {
+        font-size: 25px;
+    }
+
+    .socialWrap > ul {
+        list-style: none;
+        display: inline;
+        padding: 0;
+    }
+
+    .socialWrap li {
+        display: inline;
+        margin: 0rem 1.9rem;
+    }
+
 
 
 
