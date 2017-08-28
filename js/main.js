@@ -14,11 +14,11 @@
   //     console.log('passed a point');
   //   }
   // })
-  let animID;
+  let animID, oldIndex;
   let elemArr = doc.getElementsByClassName('content')[0].children;
 
   function toggleNewScreen(oldElem) {
-    let oldIndex = Array.apply(null, elemArr).indexOf(oldElem);
+    oldIndex = Array.apply(null, elemArr).indexOf(oldElem);
 
     oldElem.classList.remove('activeScreen');
 

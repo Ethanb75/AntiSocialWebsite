@@ -108,19 +108,22 @@ textarea {
         --yeller: #FFB849;
         --mainGrey: rgba(0,0,0,.65);
         --screenHeight: 100%;
-        --buttonPad: .62rem 1rem;
+        --buttonPad: .7rem 1.4rem;
     }
 
     * {
-        /* font-family: 'Source Sans Pro', sans-serif;
-        font-family: 'Khula', sans-serif;
-        font-family: 'Mukta Mahee', sans-serif;
-        font-family: 'Montserrat', sans-serif; */
-        font-family: 'Open Sans', sans-serif;
+        /* font-family: 'Lato', sans-serif;  */
+         font-family: 'Open Sans', sans-serif; 
     }
 
-    h1, h2 {
+    h1 {
         font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
     }
 
     /*
@@ -172,7 +175,38 @@ textarea {
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 100;
+    }
 
+    .socialUpperWrap {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        z-index: 0;
+    }
+
+    .socialUpperWrap a {
+        color: rgba(0,0,0,.65);
+        transition: all .2s ease;
+    }
+
+    .socialUpperWrap a:hover {
+        color: #ae0000;
+        transition: all .2s ease;
+    }
+
+    .socialUpperWrap ul {
+        margin-right: 1.23rem;
+        list-style: none;
+    }
+
+    .socialUpperWrap li {
+        margin-bottom: 1.23rem;
+        font-size: 19.2px;
+        color: #ae0000;
     }
 
     [class^="thick"] {
@@ -219,7 +253,7 @@ textarea {
         font-size: 4.15rem;
         font-weight: 900;
         line-height: 1.15;
-        margin-bottom: 1.62rem;
+        margin-bottom: 1.23rem;
     }
 
     .call > h3 {
@@ -231,12 +265,13 @@ textarea {
     .call > p {
         color: rgba(0,0,0,.65);
         margin-top: .2rem;
+        margin-bottom: 1.23rem;
     }
 
     .call > button {
         background: #FFB849;
         border: none;
-        padding: .62rem 1rem;
+        padding: var(--buttonPad);
         color: white;
         transition: all .3s ease-out;
         border-radius: 3.2px;
@@ -295,8 +330,8 @@ textarea {
         border-radius: 8px;
         box-shadow: 0 20px 50px 0 rgba(0,0,0,.05),0 4px 8px 0 rgba(0,0,0,.18),0 20px 40px 0 rgba(0,0,0,.21);
         position: relative;
-        right: -30%;
-        height: 70%;
+        right: -15%;
+        height: 85%;
     }
 
     .tablet::before {
@@ -361,11 +396,11 @@ textarea {
     .tools ul {
         list-style: none;
         margin: 3.2rem 0;
-        font-size: 21px;
         padding-left: 2.23rem;
     }
     .tools li {
         margin-bottom: .8rem;
+        font-size: 21px;
     }
 
     .tools li > i {
@@ -437,6 +472,9 @@ textarea {
         width: 100%;
         height: 100%;
         transition: all .4s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .screen1 {
@@ -481,8 +519,8 @@ textarea {
         flex-direction: column;
         height: 123%;
     }
-    .block3 h1 {
-        font-size: 38px;
+    .block3 h2 {
+        font-size: 42px;
         margin-bottom: 0;
     }
 
@@ -494,6 +532,21 @@ textarea {
         border-radius: 3.2px; 
         margin-top: 1.23rem;   
         transition: all .32s ease-out;    
+    }
+
+    .block3 a {
+        color: var(--mainRed);
+        top: 1.23rem;   
+        transition: all .15s ease;
+        font-size: 18px;
+        text-decoration: none;
+        position: relative;
+        padding-bottom: .38rem;
+    }
+
+    .block3 a:hover {
+        border-bottom: 2.8px solid var(--mainRed);
+        transition: all .15s ease;
     }
 
     .block3 button:hover {
@@ -516,7 +569,7 @@ textarea {
     }
 
     .header_wrap {
-        margin-top: 1.9rem;
+        margin-top: 3.8rem;
     }
 
     .header_wrap p {
@@ -527,7 +580,11 @@ textarea {
         width: 85%;
         position: relative;
         flex-grow: 1;
-        margin: 1.23rem 0rem 0rem 1.23rem;
+        margin: 1.23rem 0rem 0rem 3.8rem;
+    }
+
+    .quote_container span {
+        margin-left: 1.9rem;
     }
 
     .quote_container p {
@@ -565,11 +622,9 @@ textarea {
 
     .block2 h1 {
         /*laptop below*/
-        /* font-size: 58px;
-        margin-top: 4.8rem; */
-        /*monitor*/
-        font-size: 77px;
-        margin-top: 7rem;
+        font-size: 58px; 
+        margin-top: 4.8rem;
+        line-height: 1.15;
     }
 
     .block2 {
@@ -618,8 +673,12 @@ textarea {
         display: block;
     }
 
+    .formItem:not(:nth-of-type(1)) {
+        margin-right: 2.23rem;
+    }
+
     .contact {
-        height: 80%;
+        /* height: 80%; */
     }
 
     .contactWrap {
@@ -656,7 +715,7 @@ textarea {
     }
 
     .contactForm input:focus, .contactForm textarea:focus {
-        border: 2.1px solid var(--yeller);
+        border: 1.9px solid var(--yeller);
     }
 
     .contactForm input[name="email"], .contactForm textarea {
@@ -666,7 +725,6 @@ textarea {
     .contactForm button {
         padding: var(--buttonPad);
         background: var(--mainRed);
-        font-size: 19px;
         border: none;
         border-radius: 5.2px;
         margin-top: 1.23rem;
@@ -699,28 +757,83 @@ textarea {
         margin-bottom: 0;
         margin-top: 3.23rem;
         /*laptop*/
-        /* font-size: 62px; */
-        /*monitor*/
-        font-size: 70px;
+         font-size: 62px; 
         line-height: .01;
         color: rgba(0, 0, 0, 0.05);
     }
 
+    .beg dl {
+        margin-top: 2.23rem;
+    }
+
+    .beg dt {
+        color: #ae0000;
+    }
+
+    .beg dd {
+        font-size: 23px;
+    }
+
     .beg p {
         margin-top: 0;
-        font-size: 23px;
+        font-size: 21px;
+    }
+
+    .teamWrap {
+        width: 100%;
+        display: flex;
+    }
+
+    .teamWrap img {
+        border-radius: 100%;
+        height: 62px;
     }
 
     footer {
         width: 100%;
-        padding: 3.8rem 0rem;
+        padding-bottom: 3.8rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        text-decoration: none;
     }
 
+    footer a {
+        text-decoration: none;
+        color: rgba(0,0,0,.65);
+    }
+
+    footer > a:nth-of-type(1) {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 3.32rem;
+    }
+
+    footer > a:nth-of-type(2) {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 3.32rem;
+    }
+
+    .socialWrap {
+        position: absolute;
+        bottom: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+
     .socialWrap i {
-        font-size: 25px;
+        font-size: 21px;
+        color: rgba(0,0,0,.65);
+        cursor: pointer;
+        transition: all .2s ease;
+    }
+
+    .socialWrap i:hover {
+        color: var(--mainRed);
+        transition: all .2s ease;
     }
 
     .socialWrap > ul {
@@ -732,6 +845,66 @@ textarea {
     .socialWrap li {
         display: inline;
         margin: 0rem 1.9rem;
+    }
+
+
+
+
+    /*Media Queries!!!!*/
+
+    /* Desktops and laptops ----------- */
+    @media only screen  and (min-width : 1224px) {
+    /* Styles */
+    }
+
+    /* Large screens ----------- */
+    @media only screen  and (min-width : 1824px) {
+        .tablet {
+            height: 95%;
+            width: 90%;
+        }
+
+        .about {
+            padding: 0;
+        }
+
+        .tool > p {
+            font-size: 21px;
+        }
+
+        .tools li {
+            font-size: 23px;
+        }
+
+        .tools p span {
+            color: var(--yeller);
+        }
+
+        .header_wrap {
+            /* margin-top: 12.8rem */
+            margin-top: 10.8rem;
+        }
+
+        .sectionHeader {
+            margin-bottom: 3.5rem;
+        }
+
+        .block2 h1 {
+            font-size: 77px; 
+            margin-top: 7rem; 
+        }
+
+        .block3 h1 {
+            font-size: 48px;
+        }
+
+        footer {
+            padding: 3.8rem 0rem;
+        }
+
+        .beg h2 {
+            font-size: 70px;
+        }
     }
 
 
