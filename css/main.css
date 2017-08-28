@@ -137,11 +137,11 @@ textarea {
         color: rgba(0,0,0,.6);
     }
 
-    .brand {
+    .header__menu > div {
         flex-grow: 1;
     }
 
-    .brand img {
+    .header__menu img {
         width: 12.7rem;
     }
 
@@ -163,7 +163,7 @@ textarea {
         padding: 3.8rem 0rem; 
     }
 
-    .block, header, .block2, .block3 {
+    .block, .header, .block2, .block3 {
         height: 100%;
         position: relative;
     }
@@ -176,6 +176,7 @@ textarea {
         justify-content: center;
         align-items: center;
         z-index: 100;
+        padding-left: 5.8rem;
     }
 
     .socialUpperWrap {
@@ -237,7 +238,6 @@ textarea {
         margin-bottom: 3.36rem;
         display: flex;
         justify-content: center;
-
     }
 
     .aboutHeader {
@@ -245,30 +245,26 @@ textarea {
         color: rgba(255,255,255,.7);
     }
 
-    .call {
-        margin-left: 5.8rem;
-    }
-
-    .call > h1 {
+    .caller h1 {
         font-size: 4.15rem;
         font-weight: 900;
         line-height: 1.15;
         margin-bottom: 1.23rem;
     }
 
-    .call > h3 {
+    .caller h3 {
         font-size: 24px;
         color: rgba(0,0,0,.85);
         margin-bottom: 0;
     }
 
-    .call > p {
+    .caller p {
         color: rgba(0,0,0,.65);
         margin-top: .2rem;
         margin-bottom: 1.23rem;
     }
 
-    .call > button {
+    .caller button {
         background: #FFB849;
         border: none;
         padding: var(--buttonPad);
@@ -278,12 +274,12 @@ textarea {
         font-weight: 600;
     }
 
-    .call > button:hover {
+    .caller button:hover {
         background: #ae0000;
         transition: all .3s ease-out;
     }
 
-    .menu {
+    .header__menu {
         color: var(--lightRed);
         padding: 1.23rem 2rem;
         position: absolute;
@@ -293,19 +289,19 @@ textarea {
         box-sizing: border-box;
     }
 
-    .menu li {
+    .header__menu li {
         display: inline;
         margin-left: 2rem;
         transition: all .15s ease;
         padding: .38rem;
     }
 
-    .menu li:hover {
+    .header__menu li:hover {
         border-bottom: 3.2px solid var(--mainRed);
         transition: all .15s ease;
     }
 
-    .menu a {
+    .header__menu a {
         color: #ae0000;
         text-decoration: none;
     }
@@ -615,7 +611,7 @@ textarea {
         display: block;
     }
 
-    .header {
+    .block2__header {
         margin-left: 5.2rem;
         margin-top: 1.23rem;
     }
