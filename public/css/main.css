@@ -402,7 +402,7 @@ textarea {
     }
 
     .aboutUs a:hover {
-        border-bottom: 3.2px solid white;
+        border-bottom: 3.2px solid var(--yeller);
         transition: all .1s linear;
     }
 
