@@ -28,6 +28,7 @@ function findIndex () {
   const nextQuote = doc.getElementById('nextQuote');
   const lastQuote = doc.getElementById('lastQuote');
   const quoteArr = Array.apply(null, doc.getElementsByClassName('quote'));
+  const navLinks = Array.apply(null, doc.querySelectorAll('header a'));
 
   function toggleNewScreen(oldElem) {
     oldIndex = Array.apply(null, elemArr).indexOf(oldElem);
@@ -69,6 +70,16 @@ function findIndex () {
   });
 
   win.addEventListener('load', () => {
+    //set the default link idk why not 
+    history.replaceState(null, null, '/home')
+
+
+    navLinks.forEach(el => {
+      el.addEventListener('click', event => {
+        event.preventDefault();
+        window.history.pushState(null, null, event.target.dataset.location);
+      });
+    });
 
     setInterval(() => {
       toggleNewScreen(doc.getElementsByClassName('activeScreen')[0]);
