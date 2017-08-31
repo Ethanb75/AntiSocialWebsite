@@ -1,0 +1,33 @@
+{
+  "name": "anti-social",
+  "version": "1.0.0",
+  "description": "a website for anti social social media marketing",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "postcss": "^6.0.9",
+    "precss": "^2.0.0",
+    "waypoints": "^4.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "postcss": "^6.0.9",
+    "precss": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ethanb75/AntiSocialWebsite.git"
+  },
+  "author": "Ethan Bellora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ethanb75/AntiSocialWebsite/issues"
+  },
+  "homepage": "https://github.com/Ethanb75/AntiSocialWebsite#readme"
+}

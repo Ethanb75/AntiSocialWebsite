@@ -1,0 +1,104 @@
+[debug] [2017-08-29T18:03:59.911Z] ----------------------------------------------------------------------
+[debug] [2017-08-29T18:03:59.914Z] Command:      C:\Program Files\nodejs\node.exe C:\Users\Ethan\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase init
+[debug] [2017-08-29T18:03:59.914Z] CLI Version:  3.9.1
+[debug] [2017-08-29T18:03:59.914Z] Platform:     win32
+[debug] [2017-08-29T18:03:59.914Z] Node Version: v6.9.2
+[debug] [2017-08-29T18:03:59.914Z] Time:         Tue Aug 29 2017 14:03:59 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-29T18:03:59.915Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-08-29T18:03:59.926Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2017-08-29T18:03:59.927Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\projects\AntiSocial
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[warn] !  You have have not selected any features. Continuing will simply associate this folder with a Firebase project. Press Ctrl + C if you want to start over.
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2017-08-29T18:04:53.837Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-08-29T18:04:53.837Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/RsqSu5prCN1qToHCTvbhyGAZOxDI3ME9lTM0_V8fLTrvk_IGQ298DPCeTjxHr98m',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Aug 29 2017 14:04:53 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-29T18:04:54.139Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-29T18:04:54.168Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects  
+ Tue Aug 29 2017 14:04:54 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-29T18:04:54.841Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-29T18:12:46.817Z] ----------------------------------------------------------------------
+[debug] [2017-08-29T18:12:46.820Z] Command:      C:\Program Files\nodejs\node.exe C:\Users\Ethan\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase init --interactive
+[debug] [2017-08-29T18:12:46.821Z] CLI Version:  3.9.1
+[debug] [2017-08-29T18:12:46.821Z] Platform:     win32
+[debug] [2017-08-29T18:12:46.821Z] Node Version: v6.9.2
+[debug] [2017-08-29T18:12:46.821Z] Time:         Tue Aug 29 2017 14:12:46 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-29T18:12:46.821Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-08-29T18:12:46.831Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2017-08-29T18:12:46.831Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\projects\AntiSocial
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2017-08-29T18:12:55.652Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects  
+ Tue Aug 29 2017 14:12:55 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-29T18:12:56.455Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-29T18:13:19.048Z] ----------------------------------------------------------------------
+[debug] [2017-08-29T18:13:19.051Z] Command:      C:\Program Files\nodejs\node.exe C:\Users\Ethan\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase --interactive init
+[debug] [2017-08-29T18:13:19.051Z] CLI Version:  3.9.1
+[debug] [2017-08-29T18:13:19.052Z] Platform:     win32
+[debug] [2017-08-29T18:13:19.052Z] Node Version: v6.9.2
+[debug] [2017-08-29T18:13:19.052Z] Time:         Tue Aug 29 2017 14:13:19 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-29T18:13:19.052Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-08-29T18:13:19.062Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2017-08-29T18:13:19.062Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\projects\AntiSocial
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
