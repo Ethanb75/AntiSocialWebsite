@@ -14,16 +14,20 @@ function slideFadeIn (elem) {
 
 
 
+function findIndex () {
+
+}
+
+
+
 
 (function (doc, win) {
-  // let testPoint = new Waypoint({
-  //   element: doc.getElementById('test'),
-  //   handler: () => {
-  //     console.log('passed a point');
-  //   }
-  // })
-  let animID, oldIndex;
-  let elemArr = doc.getElementsByClassName('tablet__content')[0].children;
+  let animID, oldIndex, oldQuoteIndex;
+
+  const elemArr = doc.getElementsByClassName('tablet__content')[0].children;
+  const nextQuote = doc.getElementById('nextQuote');
+  const lastQuote = doc.getElementById('lastQuote');
+  const quoteArr = Array.apply(null, doc.getElementsByClassName('quote'));
 
   function toggleNewScreen(oldElem) {
     oldIndex = Array.apply(null, elemArr).indexOf(oldElem);
@@ -38,6 +42,31 @@ function slideFadeIn (elem) {
       elemArr[oldIndex + 1].classList.add('activeScreen');
     }
   }
+
+  function toggleNewQuote(oldQuote) {
+    oldQuoteIndex = quoteArr.indexOf(oldQuote);
+
+    console.log('old index: ', oldQuoteIndex);
+    oldQuote.classList.remove('quote--active');
+
+    if (oldQuoteIndex + 1 === quoteArr.length) {
+      oldQuoteIndex = 0;
+      setTimeout(() => {
+        quoteArr[oldQuoteIndex].classList.add('quote--active');
+      }, 300)
+
+    } else {
+      setTimeout(() => {
+        quoteArr[oldQuoteIndex + 1].classList.add('quote--active');
+      }, 300)
+    }
+  }
+
+  nextQuote.addEventListener('click', () => {
+    //find index of 
+    let old = doc.getElementsByClassName('quote--active');
+    return toggleNewQuote(old[0]);
+  });
 
   win.addEventListener('load', () => {
 

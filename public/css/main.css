@@ -628,6 +628,28 @@ textarea {
         display: block;
     }
 
+    .quoteSlider__wrap {
+        position: relative;
+    }
+
+    .quote {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateY(-9.2%);
+        transition: all .32s ease-in;
+    }
+
+    .quote--active {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    .quote:nth-of-type(1) {
+        position: relative;
+    }
+
     .block2__header {
         margin-left: 5.2rem;
         margin-top: 1.23rem;
