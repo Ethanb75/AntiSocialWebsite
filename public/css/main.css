@@ -755,7 +755,7 @@ textarea {
         width: 100%;
     }
 
-    .contactForm button {
+    .contactForm input[type="submit"] {
         padding: var(--buttonPad);
         background: var(--mainRed);
         border: none;
@@ -766,7 +766,7 @@ textarea {
         transition: all .2s ease;
     }
 
-    .contactForm button:hover {
+    .contactForm input[type="submit"]:hover {
         background: var(--yeller);
         transition: all .2s ease;
     }

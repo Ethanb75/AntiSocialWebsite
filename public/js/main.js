@@ -71,7 +71,7 @@ function findIndex () {
 
   win.addEventListener('load', () => {
     //set the default link idk why not 
-    history.replaceState(null, null, '/home')
+    // history.replaceState(null, null, '/home')
 
 
     navLinks.forEach(el => {
