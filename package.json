@@ -9,7 +9,8 @@
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "express": "^4.15.4",
-    "waypoints": "^4.0.1"
+    "scroll": "^2.0.0",
+    "smoothscroll-polyfill": "^0.3.6"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -18,7 +19,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "browserify public/js/dev.js -o public/js/main.js"
   },
   "repository": {
     "type": "git",

@@ -16,6 +16,13 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
          <link href="https://fonts.googleapis.com/css?family=Montserrat:600,900|Open+Sans:300" rel="stylesheet">  
         <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300|Montserrat:600,900" rel="stylesheet"> -->
+    
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("user_dCiSdqLDrAURIDmEOaMQH");
+            })();
+        </script>       
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -38,12 +45,12 @@
             <div class="header__caller">
                 <div>
                     <h1 id="test">Marketing in the Modern age.</h1>
-                    <h3>Personalized internet solutions from social media campaigns to website design. </h3>
+                    <h3>Personalized internet branding from social media campaigns to website design. </h3>
                     <p>
-                        Here at Anti-Social we specialize in social media marketing through
-                        personalized audience targeting and rapid prototyping.
+                        At Anti-Social we make complete online marketing solutions with
+                        personalized audience targeting, media consulting, and rapid application prototyping.
                     </p>
-                    <button>Contact Us</button>
+                    <button id="contact">Contact Us.</button>
                 </div>
             </div>
             <div class="header__social">
@@ -181,14 +188,14 @@
             <div>
                 <div class="contactForm">
                     <h2>Contact Us.</h2>
-                    <form action="https://formspree.io/belloramail@gmail.com" method="POST">
+                    <form id="form">
                         <div class="formItem">
                             <label for="name">name</label>
                             <input name="name" type="text" />
                         </div>
                         <div class="formItem">
-                            <label for="_replyTo">email</label>
-                            <input name="_replyTo" type="email" />
+                            <label for="email">email</label>
+                            <input name="email" type="email" />
                         </div>
                         <div class="formItem">
                             <label for="message">message.</label>
@@ -246,7 +253,8 @@
         
         <script src="js/vendor/noframework.waypoints.min.js"></script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <!-- <script src="js/main.js"></script> -->
+        <script src="js/dev.js"></script>  
 
 
 

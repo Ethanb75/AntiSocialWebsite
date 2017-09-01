@@ -313,15 +313,29 @@ textarea {
         padding: .38rem;
     }
 
-    .header__menu li:hover {
+     .header__menu li:hover {
         border-bottom: 3.2px solid var(--mainRed);
         transition: all .15s ease;
-    }
+    } 
 
     .header__menu a {
         color: #ae0000;
         text-decoration: none;
+        transition: all .3s ease-out;
     }
+    /* .header__menu a::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        position: relative;
+        bottom: 5px;
+        left: 0;
+        background: #1f1f1f;
+        transition: all 0.3s ease-out;
+    }
+    .header__menu a:hover::after {
+        width: 100%;
+    } */
 
     .header__map {
         width: 100%;
