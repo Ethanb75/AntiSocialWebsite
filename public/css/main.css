@@ -929,6 +929,7 @@ textarea {
         transform: translateY(100%);
         transition: all .23s ease-out;
     }
+
     .mobileNav__links--showing {
         transform: translateY(0%);
     }
@@ -980,9 +981,68 @@ textarea {
             justify-content: center;
         }
 
+
+        /*About us mobile styles*/
         .redCurveSVG {
             top: -3px;
         }
+        .about {
+            flex-direction: column-reverse;
+        }
+        .aboutUs {
+            max-width: 100%;
+            padding-left: 1.23rem;
+        }
+        .aboutUs h2 {
+            font-size: 48px;
+        }
+        .aboutUs h4 {
+            position: absolute;
+            top: .48rem;
+        }
+        .about a {
+            bottom: .72rem;
+        }
+        .about__info {
+            width: 100%;
+            align-items: left;
+        }
+        .about__tabletWrap {
+            padding: 3.36rem .62rem;
+        }
+        .tablet {
+            height: 72%;
+            width: 62%;
+            right: 0%;
+        }
+
+
+        /*Services block*/
+        .block3__header {
+            align-items: center;
+            padding: 0rem 1.23rem;
+        }
+        .block3__header p {
+            margin-top: 1.23rem;
+        }
+        .block3__header h3 {
+            margin-top: 0;
+            margin-bottom: 6.2rem;
+        }
+        .block3 h2 {
+            font-size: 32px;
+            line-height: 1.1;
+        }
+        .computer {
+            height: 23%;
+        }
+
+
+
+
+
+
+
     }
 
     /* iPads (portrait and landscape) ----------- */
