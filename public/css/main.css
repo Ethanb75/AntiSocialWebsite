@@ -955,6 +955,10 @@ textarea {
         .header__menu {
             padding: .48rem;
         }
+        .header__menu img {
+            width: 12.7rem;
+            height: 2.54rem;
+        }
         .header__menu > ul {
             display: none;
         }
@@ -1010,10 +1014,16 @@ textarea {
         .about__tabletWrap {
             padding: 3.36rem .62rem;
         }
-        .tablet {
+        /* .tablet {
             height: 72%;
             width: 62%;
             right: 0%;
+        } */
+        .tablet {
+            height: 38%;
+            width: 62%;
+            right: -10%;
+            position: absolute;
         }
 
 
@@ -1036,6 +1046,49 @@ textarea {
         .computer {
             height: 23%;
         }
+
+
+
+        /*testimonials section*/
+        .block2 {
+            flex-direction: column;
+        }
+        .block2 h1 {
+            font-size: 48px;
+        }
+        .block2__header {
+            margin-left: 1.23rem;
+        }
+        .quoteSlider {
+            margin-left: 1.23rem;
+        }
+        .quoteSlider p {
+            font-size: 14px;
+        }
+        .arrows {
+            margin-top: 1.23rem;
+        }
+
+
+        /*Contact style*/
+        .contact > div {
+            flex-direction: column;
+        }
+        .contactForm {
+            width: auto;
+            box-shadow: none;
+            top: 0;
+            margin-left: 0rem;
+        }
+        .beg {
+            max-width: none;
+            top: 0;
+            margin-left: 1.23rem;
+        }
+        .beg h4 {
+            display: none;
+        }
+
 
 
 
