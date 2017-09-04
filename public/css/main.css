@@ -1062,7 +1062,7 @@ textarea {
         .quoteSlider {
             margin-left: 1.23rem;
         }
-        .quoteSlider p {
+        .quoteSlider p, .quoteSlider span {
             font-size: 14px;
         }
         .arrows {
@@ -1084,9 +1084,21 @@ textarea {
             max-width: none;
             top: 0;
             margin-left: 1.23rem;
+            margin-top: 2.23rem;
+            font-size: 14px;
+        }
+        .beg p {
+            font-size: 16px;
+        }
+        .beg dd {
+            font-size: 16px;
         }
         .beg h4 {
             display: none;
+        }
+        .beg h2 {
+            font-size: 38px;
+            margin-top: 0;
         }
 
 
