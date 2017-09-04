@@ -1,7 +1,5 @@
 // require('smoothscroll-polyfill').polyfill();
 
-console.log('jesus christ')
-
 let waypoint = new Waypoint({
   element: document.getElementsByClassName('contact')[0],
   handler: function(direction) {
@@ -32,10 +30,15 @@ function findIndex () {
   const lastQuote = doc.getElementById('lastQuote');
   const quoteArr = Array.apply(null, doc.getElementsByClassName('quote'));
   const navLinks = Array.apply(null, doc.querySelectorAll('header a'));
+
   const contactBtn = doc.getElementById('contact');
   const form = doc.getElementById('form');
+  const contactElement = doc.getElementsByClassName('contact')[0];
 
-  console.log(form);
+  const toggleMobileNav = doc.getElementsByClassName('mobileNav__button')[0];
+  const mobileLinks = doc.getElementsByClassName('mobileNav__links')[0];
+  const mobileNav = doc.getElementsByClassName('mobileNav')[0];
+
 
   function toggleNewScreen(oldElem) {
     oldIndex = Array.apply(null, elemArr).indexOf(oldElem);
@@ -70,20 +73,29 @@ function findIndex () {
     }
   }
 
-  contactBtn.addEventListener('click', function () {
-    let contactForm = doc.getElementsByClassName('contact')[0];
 
-    // window.scroll({
-    //   top: window.innerHeight * 5 - 300, 
-    //   left: 0, 
-    //   behavior: 'smooth' 
-    // });
 
-    contactForm.scrollIntoView({ 
+  //----------------------------------------------
+  // Event Listeners
+  //----------------------------------------------
+
+
+
+
+  contactBtn.addEventListener('click', () => {
+    contactElement.scrollIntoView({ 
       behavior: 'smooth' 
     });
-
   });
+
+  toggleMobileNav.addEventListener('click', () => {
+    //TODO, add check to see if the container state for nav showing is showing
+    if (mobileNav.dataset.isout === "false") {
+      //add the class to show links, toggle data for container
+      mobileLinks.classList.add('mobileNav__links--showing');
+      mobileNav.dataset.isout = 'true';
+    }
+  })
 
   form.addEventListener('submit', e => {
     e.preventDefault();

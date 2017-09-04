@@ -143,6 +143,10 @@ textarea {
         opacity: 0;
     } */
 
+    .mobileNav {
+        display: none;
+    }
+
     .tablet__content img {
         max-width: 19%;
     }
@@ -153,7 +157,7 @@ textarea {
         color: rgba(0,0,0,.6);
     }
 
-    .header__menu > div {
+    .header__menu > div:nth-of-type(1) {
         flex-grow: 1;
     }
 
@@ -344,6 +348,7 @@ textarea {
         display: flex;
         justify-content: center;
         align-items: center
+        
     }
 
     .header__map > img {
@@ -895,13 +900,93 @@ textarea {
         margin: 0rem 1.9rem;
     }
 
+    .redCurveSVG {
+        position: relative;
+        top: -1px
+    }
 
+    .mobileNav__button {
+        padding: .48rem;
+        position: fixed;
+        bottom: .23rem;
+        right: 1.23rem;
+        font-size: 24px;
+        z-index: 100000;
+        cursor: pointer;
+    }
+
+    .mobileNav__links {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100000;
+        background: wheat;
+        transform: translateY(100%);
+        transition: all .23s ease-out;
+    }
+    .mobileNav__links--showing {
+        transform: translateY(0%);
+    }
+
+    .closeNav {
+        position: absolute;
+        bottom: .62rem;
+        right: 1.23rem;
+        font-size: 24px;
+        cursor: pointer;
+        padding: .48rem;
+    }
 
 
     /*Media Queries!!!!*/
 
-    /* Desktops and laptops ----------- */
-    @media only screen  and (min-width : 1224px) {
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        .mobileNav {
+            position: absolute;
+            display: inline;
+        }
+        .header__menu {
+            padding: .48rem;
+        }
+        .header__menu > ul {
+            display: none;
+        }
+        .header__caller h1 {
+            font-size: 48px;
+            line-height: 1;
+        }
+        .header__caller h3 {
+            font-size: 19.2px;
+            font-weight: 100;
+        }
+        .header__caller p {
+            display: none;
+        }
+        .header__caller {
+            padding-left: 1.9rem;
+        }
+        .header__caller button {
+            margin-top: 1.23rem;
+        }
+        .header__menu > div:nth-of-type(1) {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .redCurveSVG {
+            top: -3px;
+        }
+    }
+
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     /* Styles */
     }
 
