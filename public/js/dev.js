@@ -35,9 +35,10 @@ function findIndex () {
   const form = doc.getElementById('form');
   const contactElement = doc.getElementsByClassName('contact')[0];
 
-  const toggleMobileNav = doc.getElementsByClassName('mobileNav__button')[0];
+  const openNav = doc.getElementsByClassName('mobileNav__button')[0];
   const mobileLinks = doc.getElementsByClassName('mobileNav__links')[0];
   const mobileNav = doc.getElementsByClassName('mobileNav')[0];
+  const closeNav = doc.getElementsByClassName('closeNav')[0];
 
 
   function toggleNewScreen(oldElem) {
@@ -88,12 +89,20 @@ function findIndex () {
     });
   });
 
-  toggleMobileNav.addEventListener('click', () => {
+  openNav.addEventListener('click', () => {
     //TODO, add check to see if the container state for nav showing is showing
     if (mobileNav.dataset.isout === "false") {
       //add the class to show links, toggle data for container
       mobileLinks.classList.add('mobileNav__links--showing');
       mobileNav.dataset.isout = 'true';
+    }
+  });
+
+  closeNav.addEventListener('click', () => {
+    if (mobileNav.dataset.isout === "true") {
+      //add the class to show links, toggle data for container
+      mobileLinks.classList.remove('mobileNav__links--showing');
+      mobileNav.dataset.isout = 'false';
     }
   })
 
