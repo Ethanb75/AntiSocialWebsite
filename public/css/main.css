@@ -121,6 +121,10 @@ textarea {
          font-family: 'Open Sans', sans-serif; 
     }
 
+    a {
+        text-decoration: none;
+    }
+
     h1 {
          font-family: 'Montserrat', sans-serif; 
         font-weight: 900;
@@ -145,6 +149,7 @@ textarea {
 
     .mobileNav {
         display: none;
+
     }
 
     .tablet__content img {
@@ -240,7 +245,7 @@ textarea {
 
     [class^="thick"] {
         border-top: none;
-        border-bottom: .38rem solid var(--yeller);
+        border-bottom: .38rem solid #FFB849;
     }
 
     .stats h4 {
@@ -413,7 +418,7 @@ textarea {
     }
 
     .aboutUs a {
-        color: var(--yeller);
+        color: #FFB849;
         text-decoration: none;
         transition: all .1s ease-out;
         display: inline;
@@ -425,7 +430,7 @@ textarea {
     }
 
     .aboutUs a:hover {
-        border-bottom: 3.2px solid var(--yeller);
+        border-bottom: 3.2px solid #FFB849;
         transition: all .1s linear;
     }
 
@@ -468,7 +473,7 @@ textarea {
     
 
     .learnMoreBtn:hover {
-        border-bottom: 3.2px solid var(--yeller);
+        border-bottom: 3.2px solid #FFB849;
         transition: all .1s linear;
     }
 
@@ -589,7 +594,7 @@ textarea {
     }
 
     .block3 button:hover {
-        background: var(--yeller);
+        background: #FFB849;
         transition: all .32s ease-out;
     }
 
@@ -687,7 +692,7 @@ textarea {
     }
 
     .block2 {
-        background: var(--yeller);
+        background: #FFB849;
         display: flex;
         /*laptop*/
         /* height: 128%; */
@@ -771,7 +776,7 @@ textarea {
     }
 
     .contactForm input:focus, .contactForm textarea:focus {
-        border: 1.9px solid var(--yeller);
+        border: 1.9px solid #FFB849;
     }
 
     .contactForm input[name="email"], .contactForm textarea {
@@ -790,7 +795,7 @@ textarea {
     }
 
     .contactForm input[type="submit"]:hover {
-        background: var(--yeller);
+        background: #FFB849;
         transition: all .2s ease;
     }
 
@@ -909,6 +914,10 @@ textarea {
         top: -1px
     }
 
+    .mobileNav {
+        position: absolute;
+    }
+
     .mobileNav__button {
         padding: .48rem;
         position: fixed;
@@ -947,13 +956,37 @@ textarea {
         padding: .48rem;
     }
 
+    .links {
+        position: relative;
+        width: 100%  
+    }
+    .links ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    .links li {
+        text-align: right;
+        padding: 1.23rem;
+    }
+    .links a {
+        padding: 1.23rem;
+    }
+    .links a:hover, .links a:active, .links:focus {
+        background: rgba(255, 255, 255, 0.15)
+    }
+    .mobileNav__links .socialWrap {
+        position: absolute;
+        text-align: right;
+        bottom: 3.6rem;
+    }
+
 
     /*Media Queries!!!!*/
 
     /* Smartphones (portrait and landscape) ----------- */
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        
         .mobileNav {
-            position: absolute;
             display: inline;
         }
         .header__menu {
@@ -1112,7 +1145,7 @@ textarea {
             padding-bottom: 0;
             display: flex;
             overflow: hidden;
-            flex-direction: column;
+            flex-direction: column-reverse;
             align-items: left;
         }
         .socialWrap {
@@ -1124,10 +1157,10 @@ textarea {
             position: static;
         }
         footer > a:nth-of-type(2) {
-            margin: 0rem 0rem 1.23rem 1.23rem;
+           margin-left: 1.23rem;
         }
-        footer > a:nth-of-type(1) {
-            margin-left: 1.23rem;
+        footer > a:nth-of-type(1) {            
+            margin: 0rem 0rem 1.23rem 1.23rem;
         } 
 
     } /* End of mobile style */
@@ -1157,7 +1190,7 @@ textarea {
         }
 
         .aboutUs p span {
-            color: var(--yeller);
+            color: #FFB849;
         }
 
         .block3__header {
