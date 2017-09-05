@@ -195,7 +195,7 @@ textarea {
         padding: 3.8rem 0rem; 
     }
 
-    .about, .header, .block2, .block3 {
+    .about, .header, .testimonials, .services {
         height: 100%;
         position: relative;
         overflow: hidden;
@@ -555,20 +555,20 @@ textarea {
 
 
 
-    /*Block3 styles*/
-    .block3 {
+    /*services styles*/
+    .services {
         display: flex;
         justify-content: center;
         text-align: center;
         flex-direction: column;
         height: 123%;
     }
-    .block3 h2 {
+    .services h2 {
         font-size: 42px;
         margin-bottom: 0;
     }
 
-    .block3 button {
+    .services button {
         border: none;
         background: #AE0000;
         padding: var(--buttonPad);
@@ -578,7 +578,7 @@ textarea {
         transition: all .32s ease-out;    
     }
 
-    .block3 a {
+    .services a {
         color: #ae0000;
         top: 1.23rem;   
         transition: all .15s ease;
@@ -588,32 +588,32 @@ textarea {
         padding-bottom: .38rem;
     }
 
-    .block3 a:hover {
+    .services a:hover {
         border-bottom: 2.8px solid #ae0000;
         transition: all .15s ease;
     }
 
-    .block3 button:hover {
+    .services button:hover {
         background: #FFB849;
         transition: all .32s ease-out;
     }
 
 
-    .block3__computerWrap {
+    .services__computerWrap {
         flex-grow: 1;
         display: flex;
         justify-content: center;
 
     }
 
-    .block3__header {
+    .services__header {
         flex-grow: 1;
         display: flex;
         justify-content: center;
         padding-top: 3.8rem;
     }
 
-    .block3__header p {
+    .services__header p {
         margin-top: .38rem;
     }
 
@@ -678,20 +678,20 @@ textarea {
         position: relative;
     }
 
-    .block2__header {
+    .testimonials__header {
         margin-left: 5.2rem;
         margin-top: 1.23rem;
     }
     
 
-    .block2 h1 {
+    .testimonials h1 {
         /*laptop below*/
         font-size: 58px; 
         margin-top: 4.8rem;
         line-height: 1.15;
     }
 
-    .block2 {
+    .testimonials {
         background: #FFB849;
         display: flex;
         /*laptop*/
@@ -700,19 +700,19 @@ textarea {
         height: 115%;
     }
 
-    .block2__quotes > div {
+    .testimonials__quotes > div {
         display: flex;
         flex-direction: column;
     }
 
-    .block2__quotes {
+    .testimonials__quotes {
         display: flex;
         align-content: center;
         align-items: center;
         /* flex-direction: column; */
     }
 
-    .block2__quotes a {
+    .testimonials__quotes a {
         font-size: 21px;
         text-decoration: none;
         color: #ae0000;
@@ -721,7 +721,7 @@ textarea {
         padding-bottom: .38rem;
     }
 
-    .block2__quotes a:hover {
+    .testimonials__quotes a:hover {
         border-bottom: 3.2px solid #ae0000;
         transition: all .15s ease;
     }
@@ -1065,18 +1065,18 @@ textarea {
 
 
         /*Services block*/
-        .block3__header {
+        .services__header {
             align-items: center;
             padding: 0rem 1.23rem;
         }
-        .block3__header p {
+        .services__header p {
             margin-top: 1.23rem;
         }
-        .block3__header h3 {
+        .services__header h3 {
             margin-top: 0;
             margin-bottom: 6.2rem;
         }
-        .block3 h2 {
+        .services h2 {
             font-size: 32px;
             line-height: 1.1;
         }
@@ -1087,17 +1087,17 @@ textarea {
 
 
         /*testimonials section*/
-        .block2 {
+        .testimonials {
             flex-direction: column;
             height: 125%;
         }
-        .block2 h1 {
+        .testimonials h1 {
             font-size: 48px;
         }
-        .block2__quotes {
+        .testimonials__quotes {
             margin-bottom: 2.8rem;
         }
-        .block2__header {
+        .testimonials__header {
             margin-left: 1.23rem;
         }
         .quoteSlider {
@@ -1195,20 +1195,20 @@ textarea {
             color: #FFB849;
         }
 
-        .block3__header {
+        .services__header {
             padding-top: 10.8rem;
         }
 
-        .block3__header h3 {
+        .services__header h3 {
             margin-bottom: 3.5rem;
         }
 
-        .block2 h1 {
+        .testimonials h1 {
             font-size: 77px; 
             margin-top: 7rem; 
         }
 
-        .block3 h1 {
+        .services h1 {
             font-size: 48px;
         }
 
