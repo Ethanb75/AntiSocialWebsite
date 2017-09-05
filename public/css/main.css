@@ -185,7 +185,7 @@ textarea {
         justify-content: center;
         flex-direction: row;
         color: white;
-        background: var(--mainRed);
+        background: #ae0000;
         /*below fixes container size on laptop screens*/
         padding: 3.8rem 0rem; 
     }
@@ -322,7 +322,7 @@ textarea {
     }
 
      .header__menu li:hover {
-        border-bottom: 3.2px solid var(--mainRed);
+        border-bottom: 3.2px solid #ae0000;
         transition: all .15s ease;
     } 
 
@@ -408,7 +408,7 @@ textarea {
 
     .aboutUs button:hover {
         color: white;
-        background: var(--mainRed);
+        background: #ae0000;
         transition: all .32s ease-out;
     }
 
@@ -574,7 +574,7 @@ textarea {
     }
 
     .block3 a {
-        color: var(--mainRed);
+        color: #ae0000;
         top: 1.23rem;   
         transition: all .15s ease;
         font-size: 18px;
@@ -584,7 +584,7 @@ textarea {
     }
 
     .block3 a:hover {
-        border-bottom: 2.8px solid var(--mainRed);
+        border-bottom: 2.8px solid #ae0000;
         transition: all .15s ease;
     }
 
@@ -641,7 +641,7 @@ textarea {
     }
 
     .arrows > i:hover {
-        color: var(--mainRed);
+        color: #ae0000;
         transition: all .2s ease;
     }
 
@@ -710,14 +710,14 @@ textarea {
     .block2__quotes a {
         font-size: 21px;
         text-decoration: none;
-        color: var(--mainRed);
+        color: #ae0000;
         margin-left: 3.21rem;
         transition: all .15s ease;
         padding-bottom: .38rem;
     }
 
     .block2__quotes a:hover {
-        border-bottom: 3.2px solid var(--mainRed);
+        border-bottom: 3.2px solid #ae0000;
         transition: all .15s ease;
     }
 
@@ -780,7 +780,7 @@ textarea {
 
     .contactForm input[type="submit"] {
         padding: var(--buttonPad);
-        background: var(--mainRed);
+        background: #ae0000;
         border: none;
         border-radius: 5.2px;
         margin-top: 1.23rem;
@@ -889,7 +889,7 @@ textarea {
     }
 
     .socialWrap i:hover {
-        color: var(--mainRed);
+        color: #ae0000;
         transition: all .2s ease;
     }
 
