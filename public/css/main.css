@@ -773,10 +773,12 @@ textarea {
         border: 1.9px solid rgba(0,0,0,.18);
         border-radius: 5.2px;
         padding: .62rem;
+        outline: none;
     }
 
     .contactForm input:focus, .contactForm textarea:focus {
         border: 1.9px solid #FFB849;
+
     }
 
     .contactForm input[name="email"], .contactForm textarea {
@@ -966,13 +968,15 @@ textarea {
     }
     .links li {
         text-align: right;
-        padding: 1.23rem;
     }
     .links a {
-        padding: 1.23rem;
+        padding: 1.23rem 2.23rem;
+        color: rgba(0,0,0,.8);
+        display: block;
     }
-    .links a:hover, .links a:active, .links:focus {
-        background: rgba(255, 255, 255, 0.15)
+    .links a:hover, .links a:active, .links a:focus {
+        background: rgba(255, 255, 255, 0.15);
+        outline: none;
     }
     .mobileNav__links .socialWrap {
         position: absolute;
