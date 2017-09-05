@@ -1,4 +1,4 @@
-require('smoothscroll-polyfill').polyfill();
+// require('smoothscroll-polyfill').polyfill();
 
 // listen to events...
 // mc.on("panleft panright tap press", function(ev) {
