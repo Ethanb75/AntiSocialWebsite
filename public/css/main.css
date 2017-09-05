@@ -193,6 +193,7 @@ textarea {
     .about, .header, .block2, .block3 {
         height: 100%;
         position: relative;
+        overflow: hidden;
     }
     
     .header__caller {
@@ -929,7 +930,7 @@ textarea {
         align-items: center;
         z-index: 100000;
         background: wheat;
-        transform: translateY(100%);
+        transform: translateY(200%);
         transition: all .23s ease-out;
     }
 

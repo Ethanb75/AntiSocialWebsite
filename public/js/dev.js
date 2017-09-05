@@ -1,44 +1,66 @@
 // require('smoothscroll-polyfill').polyfill();
 
-let waypoint = new Waypoint({
-  element: document.getElementsByClassName('contact')[0],
-  handler: function(direction) {
-    console.log('scrolled to contact')
-  }
-})
+// listen to events...
+// mc.on("panleft panright tap press", function(ev) {
+//     myElement.textContent = ev.type +" gesture detected.";
+// });
+
+
+
+
+
+// var waypoint = new Waypoint({
+//   element: document.getElementsByClassName('contact')[0],
+//   handler: function(direction) {
+//     console.log('scrolled to contact')
+//   }
+// })
 //slide in function
 //takes an elem and applies a slide
 function slideFadeIn (elem) {
   elem.style.transform = 'translate(0%)';
   elem.style.opacity = '1';
-}
+};
 
 
 
 function findIndex () {
 
-}
+};
 
 
 
 
 (function (doc, win) {
-  let animID, oldIndex, oldQuoteIndex;
+  var animID; 
+  var oldIndex;
+  var oldQuoteIndex;
 
-  const elemArr = doc.getElementsByClassName('tablet__content')[0].children;
-  const nextQuote = doc.getElementById('nextQuote');
-  const lastQuote = doc.getElementById('lastQuote');
-  const quoteArr = Array.apply(null, doc.getElementsByClassName('quote'));
-  const navLinks = Array.apply(null, doc.querySelectorAll('header a'));
+   var elemArr = doc.getElementsByClassName('tablet__content')[0].children,
+     nextQuote = doc.getElementById('nextQuote'),
+     lastQuote = doc.getElementById('lastQuote'),
+      quoteArr = Array.apply(null, doc.getElementsByClassName('quote')),
+      navLinks = Array.apply(null, doc.querySelectorAll('header a')),
 
-  const contactBtn = doc.getElementById('contact');
-  const form = doc.getElementById('form');
-  const contactElement = doc.getElementsByClassName('contact')[0];
+    contactBtn = doc.getElementById('contact'),
+          form = doc.getElementById('form'),
+contactElement = doc.getElementsByClassName('contact')[0],
 
-  const openNav = doc.getElementsByClassName('mobileNav__button')[0];
-  const mobileLinks = doc.getElementsByClassName('mobileNav__links')[0];
-  const mobileNav = doc.getElementsByClassName('mobileNav')[0];
-  const closeNav = doc.getElementsByClassName('closeNav')[0];
+       openNav = doc.getElementsByClassName('mobileNav__button')[0],
+   mobileLinks = doc.getElementsByClassName('mobileNav__links')[0],
+     mobileNav = doc.getElementsByClassName('mobileNav')[0],
+      closeNav = doc.getElementsByClassName('closeNav')[0];
+
+
+  //hammerJS for touch gestures
+
+  var openNavHammer = new Hammer(openNav),
+      closeNavHammer = new Hammer(closeNav);
+
+
+  // openNavHammer.on('tap press', function(ev) {
+  //   console.log('tap happened');
+  // });
 
 
   function toggleNewScreen(oldElem) {
@@ -53,7 +75,7 @@ function findIndex () {
     } else {
       elemArr[oldIndex + 1].classList.add('activeScreen');
     }
-  }
+  };
 
   function toggleNewQuote(oldQuote) {
     oldQuoteIndex = quoteArr.indexOf(oldQuote);
@@ -63,16 +85,16 @@ function findIndex () {
 
     if (oldQuoteIndex + 1 === quoteArr.length) {
       oldQuoteIndex = 0;
-      setTimeout(() => {
+      setTimeout(function(){
         quoteArr[oldQuoteIndex].classList.add('quote--active');
       }, 300)
 
     } else {
-      setTimeout(() => {
+      setTimeout(function() {
         quoteArr[oldQuoteIndex + 1].classList.add('quote--active');
       }, 300)
     }
-  }
+  };
 
 
 
@@ -83,22 +105,21 @@ function findIndex () {
 
 
 
-  contactBtn.addEventListener('click', () => {
+  contactBtn.addEventListener('click', function() {
     contactElement.scrollIntoView({ 
       behavior: 'smooth' 
     });
   });
 
-  openNav.addEventListener('click', () => {
-    //TODO, add check to see if the container state for nav showing is showing
+  openNavHammer.on('tap press', function(ev) {
+    console.log('hammer tap happened');
     if (mobileNav.dataset.isout === "false") {
       //add the class to show links, toggle data for container
       mobileLinks.classList.add('mobileNav__links--showing');
       mobileNav.dataset.isout = 'true';
     }
   });
-
-  closeNav.addEventListener('click', () => {
+  closeNavHammer.on('tap press', function(ev) {
     if (mobileNav.dataset.isout === "true") {
       //add the class to show links, toggle data for container
       mobileLinks.classList.remove('mobileNav__links--showing');
@@ -106,10 +127,28 @@ function findIndex () {
     }
   })
 
-  form.addEventListener('submit', e => {
+  // openNav.addEventListener('click', function() {
+  //   console.log('openNav was clicked');
+  //   //TODO, add check to see if the container state for nav showing is showing
+  //   if (mobileNav.dataset.isout === "false") {
+  //     //add the class to show links, toggle data for container
+  //     mobileLinks.classList.add('mobileNav__links--showing');
+  //     mobileNav.dataset.isout = 'true';
+  //   }
+  // });
+
+  // closeNav.addEventListener('click', function() {
+  //   if (mobileNav.dataset.isout === "true") {
+  //     //add the class to show links, toggle data for container
+  //     mobileLinks.classList.remove('mobileNav__links--showing');
+  //     mobileNav.dataset.isout = 'false';
+  //   }
+  // });
+
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    let name = doc.querySelector('input[name="name"]').value,
+    var name = doc.querySelector('input[name="name"]').value,
        email = doc.querySelector('input[name="email"]').value,
      message = doc.querySelector('textarea[name="message"]').value;
 
@@ -125,33 +164,33 @@ function findIndex () {
     });
   });
 
-  nextQuote.addEventListener('click', () => {
+  nextQuote.addEventListener('click', function() {
     //find index of 
-    let old = doc.getElementsByClassName('quote--active');
+    var old = doc.getElementsByClassName('quote--active');
     return toggleNewQuote(old[0]);
   });
 
-  win.addEventListener('load', () => {
+  win.addEventListener('load', function() {
     //set the default link idk why not 
     // history.replaceState(null, null, '/home')
 
 
-    navLinks.forEach(el => {
-      el.addEventListener('click', event => {
+    navLinks.forEach(function(el) {
+      el.addEventListener('click', function(event) {
         event.preventDefault();
         window.history.pushState(null, null, event.target.dataset.location);
       });
     });
 
-    setInterval(() => {
+    setInterval(function() {
       toggleNewScreen(doc.getElementsByClassName('activeScreen')[0]);
     }, 3000);
 
     
 
-  // let slideArr = Array.apply(null, document.getElementsByClassName('slideMe'));
+  // var slideArr = Array.apply(null, document.getElementsByClassName('slideMe'));
   // slideArr.forEach(el => {
-  //   let waypoint = new Waypoint({
+  //   var waypoint = new Waypoint({
   //     element: el,
   //     handler: function() {
   //       return slideFadeIn(el);
@@ -167,5 +206,5 @@ function findIndex () {
 
     // slideFadeIn(test, 'left');
 
-  })
+  });
 }(document, window));
