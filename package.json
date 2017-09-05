@@ -22,8 +22,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp && node app.js",
-    "build": "browserify ./public/js/dev.js -o ./public/js/main.js"
+    "start": "node app.js",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
