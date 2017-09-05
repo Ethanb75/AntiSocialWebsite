@@ -15,13 +15,14 @@
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
     "gulp-sass": "^3.1.0",
     "postcss": "^6.0.9",
     "precss": "^2.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+    "start": "gulp && node app.js",
     "build": "browserify ./public/js/dev.js -o ./public/js/main.js"
   },
   "repository": {
