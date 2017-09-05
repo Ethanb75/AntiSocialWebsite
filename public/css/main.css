@@ -125,6 +125,10 @@ textarea {
         text-decoration: none;
     }
 
+    input, textarea, button {
+        outline: none;
+    }
+
     h1 {
          font-family: 'Montserrat', sans-serif; 
         font-weight: 900;
@@ -773,7 +777,6 @@ textarea {
         border: 1.9px solid rgba(0,0,0,.18);
         border-radius: 5.2px;
         padding: .62rem;
-        outline: none;
     }
 
     .contactForm input:focus, .contactForm textarea:focus {
@@ -1210,6 +1213,10 @@ textarea {
         .testimonials h1 {
             font-size: 77px; 
             margin-top: 7rem; 
+        }
+
+        .projectWrap {
+            margin-top: 6.2rem
         }
 
         .services h1 {
