@@ -40,6 +40,8 @@ function findIndex () {
       navLinks = Array.apply(null, doc.querySelectorAll('header a')),
       tapFixArr = Array.apply(null, doc.getElementsByClassName('tapFix')),
 
+      computer = doc.getElementsByClassName('computer')[0],
+
     contactBtn = doc.getElementById('contact'),
           form = doc.getElementById('form'),
 contactElement = doc.getElementsByClassName('contact')[0],
@@ -193,9 +195,17 @@ contactElement = doc.getElementsByClassName('contact')[0],
     })
   })
 
+  win.addEventListener('resize', function() {
+    console.log('resize');
+    computer.style.height = (computer.clientWidth / 1.77) + 'px';
+  })
+
   win.addEventListener('load', function() {
     //set the default link idk why not 
     // history.replaceState(null, null, '/home')
+
+    //set the computer height to have a 16:9 ratio like a laptop
+    computer.style.height = (computer.clientWidth / 1.77) + 'px';
 
 
     navLinks.forEach(function(el) {
