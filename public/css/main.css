@@ -931,7 +931,7 @@ textarea {
         position: fixed;
         bottom: .92rem;
         right: 1.23rem;
-        font-size: 24px;
+        font-size: 2.5rem;
         z-index: 100000;
         cursor: pointer;
     }
