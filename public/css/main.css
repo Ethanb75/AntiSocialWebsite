@@ -959,7 +959,7 @@ textarea {
         position: absolute;
         bottom: .62rem;
         right: 1.23rem;
-        font-size: 24px;
+        font-size: 2.5rem;
         cursor: pointer;
         padding: .48rem;
     }
@@ -1129,6 +1129,9 @@ textarea {
 
 
         /*Services block*/
+        .services {
+            height: 140%;
+        }
         .services__header {
             align-items: center;
             padding: 0rem 1.23rem;
@@ -1156,7 +1159,7 @@ textarea {
         /*testimonials section*/
         .testimonials {
             flex-direction: column;
-            height: 125%;
+            height: 130%;
         }
         .testimonials h1 {
             font-size: 48px;
