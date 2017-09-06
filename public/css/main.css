@@ -988,6 +988,51 @@ textarea {
     }
 
 
+    .computer__screen, .swiper-container {
+        height: 100%;
+    }
+    /* .swiper-container {
+        e
+    } */
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+    }
+    .aboutSlide {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-100%);
+        background: wheat;
+        transition: all .23s ease-out;
+        z-index: 10;
+    }
+    .aboutSlide--show {
+        transform: translateY(0%);
+    }
+    .tapFix {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background: transparent;
+    }
+    .swiper-slide:nth-of-type(1) {
+        background-image:url(http://lorempixel.com/600/600/nature/1);
+    }
+    .swiper-slide:nth-of-type(2) {
+        background-image:url(http://lorempixel.com/600/600/nature/2);
+    }
+    .swiper-slide:nth-of-type(3) {
+        background-image:url(http://lorempixel.com/600/600/nature/3);
+    }
     /*Media Queries!!!!*/
 
     /* Smartphones (portrait and landscape) ----------- */
@@ -1000,6 +1045,7 @@ textarea {
             padding: .48rem;
         }
         .header__menu img {
+            margin-top: 1.23rem;
             width: 12.7rem;
             height: 2.54rem;
         }
@@ -1089,6 +1135,9 @@ textarea {
         }
         .computer {
             height: 23%;
+            width: 100%;
+            border: none;
+            border-radius: 0;
         }
 
 

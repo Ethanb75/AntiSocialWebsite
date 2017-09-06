@@ -6,9 +6,6 @@ require('smoothscroll-polyfill').polyfill();
 // });
 
 
-
-
-
 var waypoint = new Waypoint({
   element: document.getElementsByClassName('contact')[0],
   handler: function(direction) {
@@ -41,6 +38,7 @@ function findIndex () {
      lastQuote = doc.getElementById('lastQuote'),
       quoteArr = Array.apply(null, doc.getElementsByClassName('quote')),
       navLinks = Array.apply(null, doc.querySelectorAll('header a')),
+      tapFixArr = Array.apply(null, doc.getElementsByClassName('tapFix')),
 
     contactBtn = doc.getElementById('contact'),
           form = doc.getElementById('form'),
@@ -56,6 +54,19 @@ contactElement = doc.getElementsByClassName('contact')[0],
 
   var openNavHammer = new Hammer(openNav),
       closeNavHammer = new Hammer(closeNav);
+
+
+  //Swiper
+
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    onSlideChangeEnd: function(slider) {
+      var closeMe = doc.getElementsByClassName('aboutSlide--show')[0];
+      if (closeMe) {
+        closeMe.classList.remove('aboutSlide--show');
+      }
+    }
+  });
 
 
   // openNavHammer.on('tap press', function(ev) {
@@ -169,6 +180,18 @@ contactElement = doc.getElementsByClassName('contact')[0],
     var old = doc.getElementsByClassName('quote--active');
     return toggleNewQuote(old[0]);
   });
+
+  tapFixArr.forEach(function(el) {
+    var elHammer = new Hammer(el);
+
+    elHammer.on('tap', function(ev) {
+      ev
+        .target
+        .previousElementSibling
+        .classList
+        .toggle('aboutSlide--show');
+    })
+  })
 
   win.addEventListener('load', function() {
     //set the default link idk why not 
