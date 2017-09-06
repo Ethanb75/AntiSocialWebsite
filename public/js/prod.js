@@ -367,13 +367,14 @@ function findIndex () {
      lastQuote = doc.getElementById('lastQuote'),
       quoteArr = Array.apply(null, doc.getElementsByClassName('quote')),
       navLinks = Array.apply(null, doc.querySelectorAll('header a')),
-      tapFixArr = Array.apply(null, doc.getElementsByClassName('tapFix')),
+     tapFixArr = Array.apply(null, doc.getElementsByClassName('tapFix')),
 
       computer = doc.getElementsByClassName('computer')[0],
 
     contactBtn = doc.getElementById('contact'),
           form = doc.getElementById('form'),
 contactElement = doc.getElementsByClassName('contact')[0],
+          body = doc.getElementsByTagName('body')[0];
 
        openNav = doc.getElementsByClassName('mobileNav__button')[0],
    mobileLinks = doc.getElementsByClassName('mobileNav__links')[0],
@@ -458,6 +459,9 @@ contactElement = doc.getElementsByClassName('contact')[0],
     if (mobileNav.dataset.isout === "false") {
       //add the class to show links, toggle data for container
       mobileLinks.classList.add('mobileNav__links--showing');
+      
+      //stop scrolling on body
+      body.style.overflow = 'hidden';
       mobileNav.dataset.isout = 'true';
     }
   });
@@ -465,6 +469,8 @@ contactElement = doc.getElementsByClassName('contact')[0],
     if (mobileNav.dataset.isout === "true") {
       //add the class to show links, toggle data for container
       mobileLinks.classList.remove('mobileNav__links--showing');
+
+      body.style.overflow = '';
       mobileNav.dataset.isout = 'false';
     }
   })
