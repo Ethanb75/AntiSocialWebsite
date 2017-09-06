@@ -495,6 +495,7 @@ textarea {
         border-bottom-right-radius: 0;
 
         position: absolute;
+        left: 0;
         bottom: 0;
         width: 62%;
         height: 50%;
@@ -1070,7 +1071,7 @@ textarea {
             display: none;
         }
         .header__caller {
-            padding-left: 1.9rem;
+            padding-left: 3.8rem;
         }
         .header__caller button {
             margin-top: 1.23rem;
@@ -1084,10 +1085,11 @@ textarea {
 
         /*About us mobile styles*/
         .redCurveSVG {
-            top: -3px;
+            top: -4px;
         }
         .about {
             flex-direction: column-reverse;
+            height: 120%;
         }
         .aboutUs {
             max-width: 100%;
@@ -1103,6 +1105,9 @@ textarea {
         .about a {
             bottom: .72rem;
         }
+        .aboutUs p {
+            max-width: 92%;
+        }
         .about__info {
             width: 100%;
             align-items: left;
@@ -1116,7 +1121,7 @@ textarea {
             right: 0%;
         } */
         .tablet {
-            height: 38%;
+            height: 42%;
             width: 62%;
             right: -10%;
             position: absolute;
