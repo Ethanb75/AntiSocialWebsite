@@ -15,9 +15,8 @@ if (process.env.PORT) {
   });
 };
 
-app.get('/', function(req, res) {
-  app.use(express.static(path.join(__dirname, 'public')));
-});
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(PORT, () => {
   console.log('listening on port 3000')
