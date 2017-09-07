@@ -434,7 +434,7 @@ textarea {
         transition: all .1s ease-out;
         padding-bottom: .38rem;
         position: absolute;
-        font-size: 21px;
+        font-size: 17px;
         bottom: 6.2rem;
     }
 
@@ -596,7 +596,7 @@ textarea {
         color: #ae0000;
         top: 1.23rem;   
         transition: all .15s ease;
-        font-size: 18px;
+        font-size: 17px;
         text-decoration: none;
         position: relative;
         padding-bottom: .38rem;
@@ -729,7 +729,7 @@ textarea {
     }
 
     .testimonials__quotes a {
-        font-size: 21px;
+        font-size: 17px;
         text-decoration: none;
         color: #ae0000;
         margin-left: 3.21rem;
@@ -774,6 +774,7 @@ textarea {
 
     .contactForm div {
         display: block;
+        margin-top: .23rem;
     }
 
     .contactForm h2 {
