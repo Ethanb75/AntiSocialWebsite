@@ -1,8 +1,9 @@
 'use strict'
 
 const gulp = require('gulp'),
-        sass = require('gulp-sass'),
-        browserify = require('gulp-browserify');
+      sass = require('gulp-sass'),
+browserify = require('gulp-browserify'),
+      gzip = require('gulp-gzip');
 
 gulp.task('sass', function () {
   return gulp.src('./public/css/*.scss')
@@ -20,4 +21,10 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('./public/build/js'));
 });
  
-gulp.task('default', ['sass', 'scripts']);
+gulp.task('compress', function() {
+    gulp.src('./public/css/**/*.css')
+    .pipe(gzip())
+    .pipe(gulp.dest('./public/scripts'));
+});
+ 
+gulp.task('default', ['sass', 'scripts', 'compress']);
