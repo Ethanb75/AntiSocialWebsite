@@ -288,7 +288,7 @@ textarea {
     }
 
     .header__caller h3 {
-        font-size: 17px;
+        font-size: 16px;
         color: rgba(0,0,0,.85);
         margin-bottom: 2.5rem;
         margin-top: 1.23rem;
@@ -453,7 +453,8 @@ textarea {
 
     .aboutUs p {
         margin-top: 0;
-        font-size: 17px;
+        font-size: 16px;
+        letter-spacing: 1px;
     }
 
     .aboutUs ul {
@@ -628,13 +629,14 @@ textarea {
 
     .services__header p {
         margin-top: .38rem;
+        letter-spacing: 1px;
     }
 
     .quoteSlider {
         width: 85%;
         position: relative;
         flex-grow: 1;
-        margin: 1.23rem 0rem 0rem 3.8rem;
+        margin: 2.23rem 0rem 0rem 3.8rem;
     }
 
     .quoteSlider span {
@@ -644,7 +646,8 @@ textarea {
     .quoteSlider p {
         padding-left: 1.9rem;
         margin-top: 1.23rem;
-        font-size: 21px;
+        font-size: 16px;
+        letter-spacing: 1px;
     }
 
     .arrows {
@@ -852,7 +855,8 @@ textarea {
 
     .beg p {
         margin-top: 0;
-        font-size: 21px;
+        font-size: 16px;
+        letter-spacing: 1px;
     }
 
     .teamWrap {
