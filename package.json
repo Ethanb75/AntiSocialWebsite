@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "autoprefixer": "^7.1.2",
+    "compression": "^1.7.0",
     "express": "^4.15.4",
     "scroll": "^2.0.0",
     "smoothscroll-polyfill": "^0.3.6"
