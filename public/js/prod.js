@@ -554,11 +554,12 @@ contactElement = doc.getElementsByClassName('contact')[0],
     })
   })
 
-  // win.addEventListener('resize', function() {
-  //   console.log('resize');
-  //   computer.style.height = (computer.clientWidth / 1.77) + 'px';
-  //   tablet.style.height = Math.round(tablet.clientWidth / 1.333) + 'px';
-  // })
+  // on orientation change resize computer and tablet
+
+  win.addEventListener("orientationchange", function() {
+    computer.style.height = (computer.clientWidth / 1.77) + 'px';
+    tablet.style.height = Math.round(tablet.clientWidth / 1.333) + 'px';
+  });
 
   win.addEventListener('load', function() {
 
