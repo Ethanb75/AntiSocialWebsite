@@ -66,7 +66,9 @@ contactElement = doc.getElementsByClassName('contact')[0],
       if (closeMe) {
         closeMe.classList.remove('aboutSlide--show');
       }
-    }
+    },
+    pagination: '.swiper-pagination-h',
+    paginationClickable: true
   });
 
   //set computer ratio to 16:9

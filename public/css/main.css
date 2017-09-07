@@ -291,7 +291,7 @@ textarea {
         font-size: 17px;
         color: rgba(0,0,0,.85);
         margin-bottom: 2.5rem;
-        margin-top: 0;
+        margin-top: 1.23rem;
         font-weight: 300;
         letter-spacing: 1px;
         max-width: 90%;
@@ -375,7 +375,7 @@ textarea {
     }
 
     .tablet {
-        width: 82%;
+        width: 75%;
         padding: 36px 14px 56px;
         border-radius: 8px;
         box-shadow: 0 20px 50px 0 rgba(0,0,0,.05),0 4px 8px 0 rgba(0,0,0,.18),0 20px 40px 0 rgba(0,0,0,.21);
@@ -503,6 +503,10 @@ textarea {
         width: 62%;
         height: 50%;
         box-shadow: 0 20px 50px 0 rgba(0,0,0,.05),0 4px 8px 0 rgba(0,0,0,.18),0 20px 40px 0 rgba(0,0,0,.21);
+    }
+
+    .computer__helper {
+        position: absolute;
     }
 
     .fa-long-arrow-right {
@@ -1035,10 +1039,10 @@ textarea {
         background-image:url(https://firebasestorage.googleapis.com/v0/b/anti-social-c2918.appspot.com/o/project1.PNG?alt=media&token=4b6d8f87-413f-42ad-bcd5-34e95b0b1471);
     }
     .swiper-slide:nth-of-type(2) {
-        background-image:url(http://lorempixel.com/600/600/nature/2);
+        background-image:url(https://firebasestorage.googleapis.com/v0/b/anti-social-c2918.appspot.com/o/project1.PNG?alt=media&token=4b6d8f87-413f-42ad-bcd5-34e95b0b1471);
     }
     .swiper-slide:nth-of-type(3) {
-        background-image:url(http://lorempixel.com/600/600/nature/3);
+        background-image:url(https://firebasestorage.googleapis.com/v0/b/anti-social-c2918.appspot.com/o/project1.PNG?alt=media&token=4b6d8f87-413f-42ad-bcd5-34e95b0b1471);
     }
     /*Media Queries!!!!*/
    
