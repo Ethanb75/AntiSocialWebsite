@@ -338,7 +338,7 @@ require('smoothscroll-polyfill').polyfill();
 var waypoint = new Waypoint({
   element: document.getElementsByClassName('contact')[0],
   handler: function(direction) {
-    console.log('scrolled to contact')
+    console.log('scrolled to contact');
   }
 })
 //slide in function
@@ -350,13 +350,10 @@ function slideFadeIn (elem) {
 
 
 
-function findIndex () {
 
-};
-
-
-
-
+// -------------------------------------------------
+// Main wrapper func
+// -------------------------------------------------
 (function (doc, win) {
   var animID; 
   var oldIndex;
@@ -370,6 +367,7 @@ function findIndex () {
      tapFixArr = Array.apply(null, doc.getElementsByClassName('tapFix')),
 
       computer = doc.getElementsByClassName('computer')[0],
+        tablet = doc.getElementsByClassName('tablet')[0],
 
     contactBtn = doc.getElementById('contact'),
           form = doc.getElementById('form'),
@@ -400,10 +398,25 @@ contactElement = doc.getElementsByClassName('contact')[0],
     }
   });
 
+  //set computer ratio to 16:9
+  computer.style.height = Math.round(computer.clientWidth / 1.777) + 'px';
+
+  //set tablet ratio to 4:3
+  tablet.style.height = Math.round(tablet.clientWidth * 1.333) + 'px';
+
 
   // openNavHammer.on('tap press', function(ev) {
   //   console.log('tap happened');
   // });
+
+  
+  
+  
+  
+  
+  // -------------------------------------------
+  // helper functions below
+  // -------------------------------------------
 
 
   function toggleNewScreen(oldElem) {
@@ -441,9 +454,18 @@ contactElement = doc.getElementsByClassName('contact')[0],
 
 
 
+  
+  
+  
+  
   //----------------------------------------------
   // Event Listeners
   //----------------------------------------------
+
+  // enable passive
+  doc.addEventListener('touchstart', () => {
+    return;
+  }, {passive: true});
 
 
 
@@ -533,15 +555,10 @@ contactElement = doc.getElementsByClassName('contact')[0],
   win.addEventListener('resize', function() {
     console.log('resize');
     computer.style.height = (computer.clientWidth / 1.77) + 'px';
+    tablet.style.height = Math.round(tablet.clientWidth / 1.333) + 'px';
   })
 
   win.addEventListener('load', function() {
-    //set the default link idk why not 
-    // history.replaceState(null, null, '/home')
-
-    //set the computer height to have a 16:9 ratio like a laptop
-    computer.style.height = (computer.clientWidth / 1.77) + 'px';
-
 
     navLinks.forEach(function(el) {
       el.addEventListener('click', function(event) {
@@ -554,25 +571,9 @@ contactElement = doc.getElementsByClassName('contact')[0],
       toggleNewScreen(doc.getElementsByClassName('activeScreen')[0]);
     }, 3000);
 
-    
-
-  // var slideArr = Array.apply(null, document.getElementsByClassName('slideMe'));
-  // slideArr.forEach(el => {
-  //   var waypoint = new Waypoint({
-  //     element: el,
-  //     handler: function() {
-  //       return slideFadeIn(el);
-  //     },
-  //     offset: window.innerHeight - 100
-  //   })
-  // })
-
-
-
-
-
-
     // slideFadeIn(test, 'left');
+
+    console.log('resources loaded')
 
   });
 }(document, window));

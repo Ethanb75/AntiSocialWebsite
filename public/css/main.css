@@ -162,7 +162,7 @@ textarea {
     }
 
     .sectionHeader {
-        letter-spacing: 7px;
+        letter-spacing: 10px;
         text-transform: uppercase;
         color: rgba(0,0,0,.6);
     }
@@ -284,13 +284,17 @@ textarea {
         font-size: 4.15rem;
         font-weight: 900;
         line-height: 1.15;
-        margin-bottom: 1.23rem;
+        margin-bottom: 0rem;
     }
 
     .header__caller h3 {
-        font-size: 24px;
+        font-size: 17px;
         color: rgba(0,0,0,.85);
-        margin-bottom: 0;
+        margin-bottom: 2.5rem;
+        margin-top: 0;
+        font-weight: 300;
+        letter-spacing: 1px;
+        max-width: 90%;
     }
 
     .header__caller p {
@@ -371,7 +375,7 @@ textarea {
     }
 
     .tablet {
-        width: 100%;
+        width: 82%;
         padding: 36px 14px 56px;
         border-radius: 8px;
         box-shadow: 0 20px 50px 0 rgba(0,0,0,.05),0 4px 8px 0 rgba(0,0,0,.18),0 20px 40px 0 rgba(0,0,0,.21);
@@ -495,7 +499,6 @@ textarea {
         border-bottom-right-radius: 0;
 
         position: absolute;
-        left: 0;
         bottom: 0;
         width: 62%;
         height: 50%;
@@ -1003,7 +1006,7 @@ textarea {
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
-        background-size: 121%;
+        background-size: 100%;
     }
     .aboutSlide {
         position: absolute;
@@ -1038,8 +1041,8 @@ textarea {
         background-image:url(http://lorempixel.com/600/600/nature/3);
     }
     /*Media Queries!!!!*/
-
-    /* Smartphones (portrait and landscape) ----------- */
+   
+    /* Bigger smartphones (portrait and landscape) ----------- */
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
         .sectionHeader {
             font-size: 14px;
@@ -1064,8 +1067,11 @@ textarea {
             line-height: 1;
         }
         .header__caller h3 {
-            font-size: 19.2px;
-            font-weight: 100;
+            font-size: 15px;
+            font-weight: 300;
+            margin-top: .92rem;
+            line-height: 1.1;
+            max-width: none;
         }
         .header__caller p {
             display: none;
@@ -1074,7 +1080,7 @@ textarea {
             padding-left: 3.8rem;
         }
         .header__caller button {
-            margin-top: 1.23rem;
+            margin-top: 0;
         }
         .header__menu > div:nth-of-type(1) {
             flex-grow: 1;
@@ -1152,6 +1158,7 @@ textarea {
             width: 100%;
             border: none;
             border-radius: 0;
+            left: 0;
         }
 
 
@@ -1237,6 +1244,36 @@ textarea {
         } 
 
     } /* End of mobile style */
+
+    /*smaller style*/
+    @media only screen and (max-device-width : 359px) {
+        .header__caller {
+            padding-left: 1.23rem;
+            width: 72%;
+        }
+        .header__caller h1 {
+            font-size: 36px;
+        }
+        .header__caller h3 {
+            font-size: 14px;
+            margin-bottom: 1.92rem;
+        }
+        .aboutUs h2 {
+            font-size: 42px;
+        }
+        .mobileNav__button {
+            font-size: 1.72rem;
+        }
+        .about {
+            height: 138%;
+        }
+        .services {
+            height: 162%;
+        }
+        .testimonials {
+            height: 170%;
+        }
+    }
 
     /* iPads (portrait and landscape) ----------- */
     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
