@@ -6,6 +6,11 @@ const PORT = process.env.PORT || 3000;
 
 // app.use(express.static(path.join(__dirname, 'public')));
 
+var compression = require('compression');
+
+// compress all responses
+app.use(compression())
+
 if (process.env.PORT) {
   app.get('*', function(req, res, next) {
     if(req.headers['x-forwarded-proto'] != 'https')
