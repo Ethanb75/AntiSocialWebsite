@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const compression = require('compression');
+const expressStaticGzip = require("express-static-gzip");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -22,10 +22,8 @@ if (process.env.PORT) {
 
 
 // serve
-app.use(express.static(path.join(__dirname, 'public')));
-
-// compress all responses
-app.use(compression())
+ 
+app.use("/", expressStaticGzip("./public"));
 
 app.listen(PORT, () => {
   console.log('listening on port 3000')
