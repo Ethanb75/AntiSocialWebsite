@@ -1,15 +1,10 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-
 const PORT = process.env.PORT || 3000;
 
-// app.use(express.static(path.join(__dirname, 'public')));
 
-var compression = require('compression');
-
-// compress all responses
-app.use(compression())
+app.use(h5bp({ root: __dirname + '/public' }));
 
 if (process.env.PORT) {
   app.get('*', function(req, res, next) {
@@ -21,6 +16,9 @@ if (process.env.PORT) {
 };
 
 
+// compress all responses
+app.use(express.compress())
+// serve
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(PORT, () => {
