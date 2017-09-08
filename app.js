@@ -13,16 +13,19 @@ if (process.env.PORT) {
   app.get('*', function(req, res, next) {
     if(req.headers['x-forwarded-proto'] != 'https')
       res.redirect('https://www.antisocial.to' + req.url);
+      // req.headers['']
     else
       next(); /* Continue to other routes if we're not redirecting */
   });
 };
 
 
-// compress all responses
-app.use(compression())
+
 // serve
 app.use(express.static(path.join(__dirname, 'public')));
+
+// compress all responses
+app.use(compression())
 
 app.listen(PORT, () => {
   console.log('listening on port 3000')
