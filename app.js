@@ -20,7 +20,7 @@ if (process.env.PORT) {
 
 
 // compress all responses
-// app.use(compression())
+app.use(compression())
 // serve
 app.use(express.static(path.join(__dirname, 'public')));
 
