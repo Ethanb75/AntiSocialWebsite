@@ -333,17 +333,7 @@
         <script src="js/index.js" async></script> 
 
 
-        <script>
-        if ('serviceWorker' in navigator) {
-            console.log("Will the service worker register?");
-            navigator.serviceWorker.register('service-worker.js')
-            .then(function(reg){
-                console.log("Yes, it did.");
-            }).catch(function(err) {
-                console.log("No it didn't. This happened: ", err)
-            });
-        }
-        </script>
+        
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -354,4 +344,15 @@
             ga('create','UA-106066342-1','auto');ga('send','pageview');
         </script>
     </body>
+    <script>
+        if ('serviceWorker' in navigator) {
+            console.log("Will the service worker register?");
+            navigator.serviceWorker.register('service-worker.js')
+            .then(function(reg){
+                console.log("Yes, it did.");
+            }).catch(function(err) {
+                console.log("No it didn't. This happened: ", err)
+            });
+        }
+    </script>
 </html>
