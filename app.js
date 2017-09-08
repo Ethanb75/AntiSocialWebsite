@@ -4,7 +4,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-app.use(h5bp({ root: __dirname + '/public' }));
+app.use(h5bp({ 
+  root: __dirname + '/public'
+}));
 
 if (process.env.PORT) {
   app.get('*', function(req, res, next) {
