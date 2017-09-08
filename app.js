@@ -1,8 +1,9 @@
 const express = require('express');
 const path = require('path');
+const compression = require('compression');
+const h5bp = require('h5bp');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const compression = require('compression');
 
 
 app.use(h5bp({ 
