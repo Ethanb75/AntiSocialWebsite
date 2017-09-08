@@ -6,9 +6,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-app.use(h5bp({ 
-  root: __dirname + '/public'
-}));
+// app.use(h5bp({ 
+//   root: __dirname + '/public'
+// }));
 
 if (process.env.PORT) {
   app.get('*', function(req, res, next) {
@@ -21,7 +21,7 @@ if (process.env.PORT) {
 
 
 // compress all responses
-app.use(compression())
+// app.use(compression())
 // serve
 app.use(express.static(path.join(__dirname, 'public')));
 
