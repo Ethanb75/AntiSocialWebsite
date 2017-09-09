@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Ethan Bellora -- CTO of Anti Social -- @ethanbellora
 
 # THANKS
 
@@ -11,5 +11,6 @@
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    CSS3, HTML5, ES5 (for now), SVG
+    Swiper, Waypoints, HammerJS
+    
