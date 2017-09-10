@@ -292,7 +292,7 @@ textarea {
     .header__caller h3 {
         font-size: 16px;
         color: rgba(0,0,0,.85);
-        margin-bottom: 2.5rem;
+        margin-bottom: 2.8rem;
         margin-top: 1.23rem;
         font-weight: 300;
         letter-spacing: 1px;
@@ -634,6 +634,7 @@ textarea {
     .services__header p {
         margin-top: .38rem;
         letter-spacing: 1px;
+        line-height: 1.5;
     }
 
     .quoteSlider {
@@ -1085,7 +1086,7 @@ textarea {
             font-size: 15px;
             font-weight: 300;
             margin-top: .92rem;
-            line-height: 1.1;
+            line-height: 1.5;
             max-width: none;
         }
         .header__caller p {
@@ -1169,7 +1170,6 @@ textarea {
         }
         .services h2 {
             font-size: 32px;
-            line-height: 1.1;
         }
         .services a {
             top: 2.23rem;
