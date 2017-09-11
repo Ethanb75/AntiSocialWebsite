@@ -314,6 +314,7 @@ textarea {
         transition: all .3s ease-out;
         border-radius: 3.2px;
         font-weight: 600;
+        letter-spacing: 1.19px;
     }
 
     .header__caller button:hover {
@@ -550,12 +551,12 @@ textarea {
     }
 
     .screen3 {
-        background: #DD316B;
+        background: #62FF9A;
         transform: translateX(100%);
     }
 
     .screen4 {
-        background: indianred;
+        background: #7D26CC;
         transform: translateX(-100%);
     }
 
@@ -664,12 +665,12 @@ textarea {
 
     .arrows > i {
         cursor: pointer;
-        transition: all .2s ease;
+        transition: all .2s ease-out;
     }
 
     .arrows > i:hover {
         color: #ae0000;
-        transition: all .2s ease;
+        transition: all .2s ease-out;
     }
 
     .quoteSlider > i {
@@ -816,6 +817,7 @@ textarea {
         font-weight: 600;
         color: white;
         transition: all .2s ease;
+        letter-spacing: 1.19px;
     }
 
     .contactForm input[type="submit"]:hover {

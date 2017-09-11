@@ -77,6 +77,11 @@ contactElement = doc.getElementsByClassName('contact')[0],
   //set tablet ratio to 4:3
   tablet.style.height = Math.round(tablet.clientWidth * 1.333) + 'px';
 
+  //set tablet icons to .162 of width
+  Array.apply(null, document.getElementsByClassName('tablet__content')[0].children)
+    .forEach(el => el.style.fontSize = tablet.clientWidth * .162 + 'px')
+    
+
 
   // openNavHammer.on('tap press', function(ev) {
   //   console.log('tap happened');
@@ -170,23 +175,6 @@ contactElement = doc.getElementsByClassName('contact')[0],
     }
   })
 
-  // openNav.addEventListener('click', function() {
-  //   console.log('openNav was clicked');
-  //   //TODO, add check to see if the container state for nav showing is showing
-  //   if (mobileNav.dataset.isout === "false") {
-  //     //add the class to show links, toggle data for container
-  //     mobileLinks.classList.add('mobileNav__links--showing');
-  //     mobileNav.dataset.isout = 'true';
-  //   }
-  // });
-
-  // closeNav.addEventListener('click', function() {
-  //   if (mobileNav.dataset.isout === "true") {
-  //     //add the class to show links, toggle data for container
-  //     mobileLinks.classList.remove('mobileNav__links--showing');
-  //     mobileNav.dataset.isout = 'false';
-  //   }
-  // });
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
