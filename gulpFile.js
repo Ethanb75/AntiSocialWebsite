@@ -37,6 +37,7 @@ gulp.task('scripts', function() {
           insertGlobals : true,
           debug : !gulp.env.production
         }))
+        // .pipe(uglify())
         .pipe(gzip())
         .pipe(gulp.dest('./public/js'));
 });
