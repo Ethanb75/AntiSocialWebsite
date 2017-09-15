@@ -43,7 +43,12 @@ function slideFadeIn (elem) {
     contactBtn = doc.getElementById('contact'),
           form = doc.getElementById('form'),
 contactElement = doc.getElementsByClassName('contact')[0],
-          body = doc.getElementsByTagName('body')[0];
+          body = doc.getElementsByTagName('body')[0],
+
+  servicesPage = doc.getElementById('servicesPage'),
+closeServicesPage = doc.getElementsByClassName('servicesPage__close')[0].children[0],
+     servClose = doc.getElementById('servClose'),
+      servCont = doc.getElementById('servCont'),
 
        openNav = doc.getElementsByClassName('mobileNav__button')[0],
    mobileLinks = doc.getElementsByClassName('mobileNav__links')[0],
@@ -52,9 +57,9 @@ contactElement = doc.getElementsByClassName('contact')[0],
 
 
   //hammerJS for touch gestures
-
-  var openNavHammer = new Hammer(openNav),
-      closeNavHammer = new Hammer(closeNav);
+var closeServicesPageHammer = new Hammer(closeServicesPage),
+              openNavHammer = new Hammer(openNav),
+             closeNavHammer = new Hammer(closeNav);
 
 
   //Swiper
@@ -130,6 +135,23 @@ contactElement = doc.getElementsByClassName('contact')[0],
     }
   };
 
+  function toggleServicesPage(ev) {
+    ev.preventDefault();
+
+    if(servicesPage.classList.contains('servicesPage--closed')) {
+      body.style.overflowY = 'hidden';
+      servicesPage.classList.remove('servicesPage--closed');
+
+      if (mobileNav.dataset.isout === "true"){
+        mobileLinks.classList.remove('mobileNav__links--showing');
+        mobileNav.dataset.isout = 'false';
+      }
+    } else {
+      body.style.overflowY = 'scroll';
+      servicesPage.classList.add('servicesPage--closed');
+    }
+  }
+
 
 
   
@@ -147,24 +169,40 @@ contactElement = doc.getElementsByClassName('contact')[0],
 
 
 
-
   contactBtn.addEventListener('click', function() {
     contactElement.scrollIntoView({ 
       behavior: 'smooth' 
     });
   });
 
+  servCont.addEventListener('click', function (ev) {
+    toggleServicesPage(ev);
+    contactElement.scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  });
+
+  servClose.addEventListener('click', function (ev) {
+    return toggleServicesPage(ev);
+  });
+
+  closeServicesPageHammer.on('tap press', function(ev) {
+    return toggleServicesPage(ev);
+  });
+
   openNavHammer.on('tap press', function(ev) {
     console.log('hammer tap happened');
     if (mobileNav.dataset.isout === "false") {
+      //stop scrolling on body
+      body.style.overflow = 'hidden';
+      
       //add the class to show links, toggle data for container
       mobileLinks.classList.add('mobileNav__links--showing');
       
-      //stop scrolling on body
-      body.style.overflow = 'hidden';
       mobileNav.dataset.isout = 'true';
     }
   });
+
   closeNavHammer.on('tap press', function(ev) {
     if (mobileNav.dataset.isout === "true") {
       //add the class to show links, toggle data for container
@@ -216,16 +254,26 @@ contactElement = doc.getElementsByClassName('contact')[0],
   // on orientation change resize computer and tablet
 
   win.addEventListener("orientationchange", function() {
-    computer.style.height = (computer.clientWidth / 1.77) + 'px';
-    tablet.style.height = Math.round(tablet.clientWidth / 1.333) + 'px';
+    computer
+      .style
+      .height = (computer.clientWidth / 1.77) + 'px';
+    
+    tablet
+      .style
+      .height = Math.round(tablet.clientWidth / 1.333) + 'px';
   });
 
   win.addEventListener('load', function() {
+    Array
+      .apply(null, document.querySelectorAll('[data-loc="services"]'))
+      .forEach(el => {el.onclick = ev => toggleServicesPage(ev)})
 
     navLinks.forEach(function(el) {
       el.addEventListener('click', function(event) {
         event.preventDefault();
-        window.history.pushState(null, null, event.target.dataset.location);
+        window
+          .history
+          .pushState(null, null, event.target.dataset.location);
       });
     });
 

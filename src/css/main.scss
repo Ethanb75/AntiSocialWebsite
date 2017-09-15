@@ -99,12 +99,8 @@ textarea {
     /*
         imports as well as root, fonts and todos (*) style
     */
-    @import url('https://rsms.me/interface/interface.css');
 
-    @font-face{ 
-        font-family: 'cgh';
-        src: url('fonts/cgh.ttf');
-    }
+
 
     $blah: 2px;
 
@@ -138,8 +134,7 @@ textarea {
     }
 
     h2 {
-         font-family: 'Montserrat', sans-serif; 
-        
+        font-family: 'Montserrat', sans-serif; 
         font-weight: 600;
     }
 
@@ -156,7 +151,12 @@ textarea {
 
     .mobileNav {
         display: none;
-
+    }
+    .logo {
+        width: 36px;
+    }
+    .logo tspan {
+        font-family: 'Gloria Hallelujah', cursive;
     }
 
     .tablet__content img {
@@ -309,12 +309,14 @@ textarea {
     .header__caller button {
         background: #FFB849;
         border: none;
-        padding: var(--buttonPad);
+        padding: .7rem 1.4rem;
         color: white;
         transition: all .3s ease-out;
         border-radius: 3.2px;
         font-weight: 600;
-        letter-spacing: 1.19px;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: .62px;
     }
 
     .header__caller button:hover {
@@ -416,7 +418,7 @@ textarea {
     }
 
     .aboutUs button {
-        padding: var(--buttonPad);
+        padding: .7rem 1.4rem;
         background: white;
         border-radius: 3.2px;
         border: none;
@@ -546,7 +548,7 @@ textarea {
     }
 
     .screen2 {
-        background: #3B5998;
+        background: #FA1919;
         transform: translateY(100%);
     }
 
@@ -590,7 +592,7 @@ textarea {
     .services button {
         border: none;
         background: #AE0000;
-        padding: var(--buttonPad);
+        padding: .7rem 1.4rem;
         color: whitesmoke;
         border-radius: 3.2px; 
         margin-top: 1.23rem;   
@@ -797,6 +799,7 @@ textarea {
         border: 1.9px solid rgba(0,0,0,.18);
         border-radius: 5.2px;
         padding: .62rem;
+        
     }
 
     .contactForm input:focus, .contactForm textarea:focus {
@@ -809,7 +812,7 @@ textarea {
     }
 
     .contactForm input[type="submit"] {
-        padding: var(--buttonPad);
+        padding: .7rem 1.4rem;
         background: #ae0000;
         border: none;
         border-radius: 5.2px;
@@ -817,7 +820,9 @@ textarea {
         font-weight: 600;
         color: white;
         transition: all .2s ease;
-        letter-spacing: 1.19px;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: .62px;
     }
 
     .contactForm input[type="submit"]:hover {
@@ -1058,6 +1063,158 @@ textarea {
     .swiper-slide:nth-of-type(3) {
         background-image:url(https://firebasestorage.googleapis.com/v0/b/anti-social-c2918.appspot.com/o/project1.PNG?alt=media&token=4b6d8f87-413f-42ad-bcd5-34e95b0b1471);
     }
+
+    .servicesPage {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100000;
+        font-size: 16px;
+        background: url(../assets/servicesBack.svg);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        overflow-y: scroll;
+        transition: all .23s ease-out;
+        background-size: 100%;
+    }
+
+    .servicesPage__close {
+        cursor: pointer;
+        position: fixed;
+        transition: all .62s ease-in;
+        right: 3.32rem;
+        top: 1.23rem;
+        font-size: 32px;
+    }
+
+    .servicesPage__deco {
+        position: fixed;
+        height: 100%;
+        width: auto;
+        // transform: translateX(-100%);
+        left: 0;
+        top: 0;
+        background: white;
+    }
+
+    .servicesPage__header {
+        text-align: center;
+    }
+    .servicesPage__header h1 {
+        font-size: 62px;
+        margin-bottom: 0;
+        margin-top: 6.2rem;
+    }
+
+    .servicesPage__header h4 {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .servicesPage--closed {
+        transform: translateX(100%);
+    }
+
+    .servicesPage__soc, .servicesPage__web, .servicesPage__cont, .servicesPage__bran {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10.8rem;
+        padding: 0 19%;
+    }
+
+    [class^="servicesPage"] h2 {
+        font-size: 32px;
+        margin-bottom: 1.23rem;
+        color: rgba(0,0,0,.7);
+    }
+
+    [class^="servicesPage"] p {
+        line-height: 1.5;
+    }
+
+    .servicesPage__soc p, .servicesPage__soc h2, .servicesPage__cont p, .servicesPage__cont h2 {
+        padding-left: 3.32rem;
+    }
+
+    .webService, .branService {
+        padding-right: 3.32rem;
+    } 
+
+    .imgWrap {
+        flex-grow: 1;
+        min-width: 40%;
+        text-align: right;
+    }
+
+    .imgWrapR {
+        min-width: 40%;
+    }
+
+    .servicesPage__soc svg, .servicesPage__web svg, .servicesPage__cont svg, .servicesPage__bran svg {
+        height: 300px;
+        width: auto;
+    }
+
+    .toolsGrid {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-gap: 0px;
+        margin-top: 2.23rem;
+    }
+
+    .servicesPage__foot {
+        background: white;
+        text-align: center;
+        padding-bottom: 6.2rem;
+    }
+
+    .servicesPage__foot h2 {
+        margin-top: 6.2rem;
+        font-size: 62px;
+        color: rgba(0,0,0,.9);
+    }
+
+    .servBtnWrap {
+        margin-top: 1.23rem;
+    }
+
+    .servBtnWrap > button {
+        background: #FFB849;
+        border: none;
+        padding: .7rem 1.4rem;
+        color: white;
+        transition: all .3s ease-out;
+        border-radius: 3.2px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: .62px;
+    }
+    .servBtnWrap > button:nth-of-type(1):hover {
+        background-color: #ae0000;
+    }
+    .servicesPage__bran {
+        margin-bottom: 6.2rem;
+    }
+    .servBtnWrap > button:nth-of-type(2) {
+        background: #7F796C;
+    }
+    .servBtnWrap > button:nth-of-type(2):hover {
+        background: #BFB6A2;
+    }
+
+
+
+
+
+
+
+
+
     /*Media Queries!!!!*/
    
     /* Bigger smartphones (portrait and landscape) ----------- */
@@ -1266,6 +1423,50 @@ textarea {
         footer > a:nth-of-type(1) {            
             margin: 1.23rem 0rem 1.23rem .92rem;
         } 
+
+
+
+
+
+
+        /*Bigger mobile - Services page*/
+        .servicesPage {
+            background: #FFC262;
+        }
+        .servicesPage__soc, .servicesPage__web, .servicesPage__cont, .servicesPage__bran {
+            flex-direction: column;
+            padding: 0rem .48rem 0rem 1.23rem;
+            align-items: left;
+            margin-top: 6.2rem;
+        }
+        .servicesPage__web, .servicesPage__bran {
+            flex-direction: column-reverse;
+        }
+        .servicesPage__header {
+            text-align: left;
+            padding-left: 1.23rem;
+        }
+        .servicesPage__header h4 {
+            margin-top: 2.23rem;
+        }
+        .servicesPage__soc svg, .servicesPage__web svg, .servicesPage__cont svg, .servicesPage__bran svg {
+            height: 160px;
+        }
+        .imgWrap {
+            text-align: left;
+        }
+        .webService, .branService {
+            padding-right: 0rem;
+        }
+        .servicesPage__soc p, .servicesPage__soc h2, .servicesPage__cont p, .servicesPage__cont h2 {
+            padding-left: 0;
+        }
+        .servicesPage__foot h2 {
+            font-size: 48px;
+        }
+        .servBtnWrap {
+            margin-top: 3.32rem;
+        }
 
     } /* End of mobile style */
 

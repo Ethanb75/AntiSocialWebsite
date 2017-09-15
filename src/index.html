@@ -9,10 +9,10 @@
 
         <!-- Twitter Card data -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@publisher_handle">
+        <meta name="twitter:site" content="@antisocialMS">
         <meta name="twitter:title" content="Page Title">
         <meta name="twitter:description" content="Page description less than 200 characters">
-        <meta name="twitter:creator" content="@author_handle">
+        <meta name="twitter:creator" content="@author_ha">
         <!-- Twitter Summary card images must be at least 120x120px -->
         <meta name="twitter:image" content="http://www.example.com/image.jpg">
 
@@ -38,7 +38,7 @@
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,900|Open+Sans:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,900|Open+Sans:300|Gloria+Hallelujah" rel="stylesheet">
     
         
         <link rel="manifest" href="manifest.json">   
@@ -58,42 +58,45 @@
                 </div>
                 <div class="links">
                     <ul>
-                        <li><a data-location="home" href="">Services.</a></li>
-                        <li><a data-location="about" href="">About.</a></li>
-                        <li><a data-location="contact" href="">Contact.</a></li>
+                        <li><a data-loc="services" href="">Services.</a></li>
+                        <li><a data-loc="about" href="">About.</a></li>
+                        <li><a data-loc="projects" href="">Projects.</a></li>
+                        <li><a data-loc="contact" href="">Contact.</a></li>
                     </ul>
                 </div>
                 <div class="socialWrap">
-                <ul>
-                    <li>
-                        <a href="">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <header class="header">
             <nav class="header__menu">
                 <div>
-                    <img src="https://firebasestorage.googleapis.com/v0/b/anti-social-c2918.appspot.com/o/logo.JPG?alt=media&token=c3796edc-215f-4334-bf7c-4cec4240a007" alt="">
+                    <!-- <img src="https://firebasestorage.googleapis.com/v0/b/anti-social-c2918.appspot.com/o/logo.JPG?alt=media&token=c3796edc-215f-4334-bf7c-4cec4240a007" alt=""> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="logo"><path opacity=".95" fill="#ae0000" d="M0 0h256v256H0z"/><text style="line-height:72px;-inkscape-font-specification:Monoton" x="19.5" y="235" font-size="40" font-family="Monoton" letter-spacing="0" word-spacing="0" fill="#fff"><tspan x="19.5" y="235" style="-inkscape-font-specification:'Gloria Hallelujah'" font-size="96" font-family="Gloria Hallelujah">AS</tspan></text></svg>
                 </div>
                 <ul>
-                    <li><a data-location="home" href="">Services</a></li>
-                    <li><a data-location="about" href="">About</a></li>
-                    <li><a data-location="contact" href="">Contact</a></li>
+                    <li><a data-loc="services" href="">Services</a></li>
+                    <li><a data-loc="about" href="">About</a></li>
+                    <li><a data-loc="projects" href="">Projects</a></li>
+                    <li><a data-loc="contact" href="">Contact</a></li>
                 </ul>
             </nav>
             <div class="header__map">
@@ -104,8 +107,7 @@
                     <h1 id="test">Marketing in the Modern age.</h1>
                     <h3>
                         <!-- Lead your competition using cutting edge marketing techniques. -->
-                        We utilize innovative social media frameworks 
-                        and modern web design to help you acheive an unparalleled internet presence.
+                        We utilize modern internet advertising techniques to help you acheive an unparalleled internet presence.
                         Contact us today and lead your competition.
                     </h3>
                     <button id="contact">Contact Us.</button>
@@ -138,10 +140,10 @@
                     <h2>Anti - Social. </h2>
                     <p>
                         We're a team of internet marketing specialists, developers and designers from Atlanta GA. We've been curating
-                        unique and creative solutions for <span>5</span> years using cutting edge strategies.
+                        unique and creative online advertising solutions for <span>5</span> years using cutting edge strategies.
                     </p>
                     
-                    <a href="/" class="slideMe">
+                    <a href="" class="slideMe" data-loc="about">
                         Learn more. <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                     </a>
                 </div> 
@@ -173,8 +175,8 @@
                 <div>
                     <h3 class="sectionHeader">Services. </h3>
                     <h2>We Offer a Wide Range of Marketing Solutions</h2>
-                    <p>From web design to photography Our stellar team can handle any and all internet marketing strategies.</p>
-                    <a href="" class="slideMe">Learn about our solutions. <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    <p>From web design to photography our stellar team can handle any and all internet marketing strategies.</p>
+                    <a href="" class="slideMe" data-loc="services">Learn about our solutions. <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="services__computerWrap">
@@ -183,15 +185,15 @@
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="aboutSlide"></div>
+                                    <div class="aboutSlide">A project</div>
                                     <div class="tapFix"></div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="aboutSlide"></div>
+                                    <div class="aboutSlide">A project</div>
                                     <div class="tapFix"></div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="aboutSlide"></div>
+                                    <div class="aboutSlide">A project</div>
                                     <div class="tapFix"></div>
                                 </div>
                             </div>
@@ -246,7 +248,7 @@
                         </div>
                     </div>
                     <div class="projectWrap">
-                        <a href="/" class="slideMe">
+                        <a href="" class="slideMe" data-loc="projects">
                             See our work. <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -299,7 +301,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
                     </li>
@@ -310,8 +312,99 @@
                     </li>
                 </ul>
             </div>
-            <a href="/careers">careers</a>
+            <a href="">careers</a>
         </footer>
+
+
+
+
+
+
+
+
+        <article id="servicesPage" class="servicesPage servicesPage--closed">
+            <div class="servicesPage__close">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <section class="servicesPage__header">
+                <h4 class="sectionHeader">services. </h4>
+                <h1>We offer a lot. </h1>
+            </section>
+            <section class="servicesPage__soc">
+                <div class="imgWrap">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256" fill="#E6F3FF"/><path d="M511.93 261.56L405.24 154.872l-261.87 151.695-53.513 37.44 45.938 45.94-18.592 16.042 103.59 103.59c11.51 1.583 23.257 2.42 35.202 2.42 139.528 0 252.973-111.625 255.93-250.44z" fill="#CFDBE6"/><path d="M273.434 296.784c0-42.498-45.935-76.948-102.597-76.948S68.24 254.286 68.24 296.784c0 32.213 26.404 59.787 63.854 71.254-1.396 21.175-14.888 37.95-14.888 37.95 28.97-5.994 45.733-18.808 55.41-32.29 55.84-.715 100.818-34.864 100.818-76.914z" fill="#324A5E"/><path d="M170.955 219.838V375.9c.572-.732 1.13-1.464 1.66-2.202 55.84-.715 100.817-34.864 100.817-76.914.002-42.468-45.868-76.898-102.477-76.946z" fill="#2B3B4E"/><path d="M191.198 199.323c0-47.726 51.586-86.416 115.22-86.416s115.222 38.69 115.222 86.416c0 36.176-29.65 67.143-71.71 80.02 1.568 23.78 16.717 42.62 16.717 42.62-32.532-6.732-51.36-21.123-62.228-36.262-62.708-.802-113.222-39.154-113.222-86.377z" fill="#31BAFD"/><path d="M421.64 199.323c0-47.726-51.586-86.416-115.22-86.416-.915 0-1.816.036-2.725.052v172.717c.243.003.483.02.726.022 10.867 15.14 29.695 29.53 62.23 36.26 0 0-15.15-18.838-16.72-42.62 42.06-12.874 71.71-43.84 71.71-80.017z" fill="#2B9ED8"/><path d="M357.17 167.874c-2.185.97-4.454 1.733-6.78 2.286 2.564-2.436 4.494-5.484 5.58-8.885.31-.97-.745-1.81-1.62-1.29-3.237 1.92-6.723 3.36-10.364 4.28-.212.054-.43.082-.648.082-.664 0-1.308-.247-1.815-.693-3.874-3.413-8.854-5.292-14.026-5.292-2.238 0-4.498.348-6.715 1.036-6.873 2.132-12.176 7.8-13.84 14.796-.624 2.624-.793 5.25-.503 7.804.032.293-.106.498-.192.595-.15.17-.364.265-.584.265l-.076-.003c-15.045-1.398-28.612-8.645-38.202-20.41-.49-.6-1.427-.525-1.817.142-1.878 3.222-2.87 6.906-2.87 10.655 0 5.746 2.307 11.162 6.317 15.11-1.686-.4-3.32-1.03-4.836-1.872-.732-.407-1.635.116-1.645.955-.105 8.537 4.892 16.132 12.38 19.553-.15.003-.303.005-.454.005-1.185 0-2.387-.114-3.57-.34-.827-.158-1.522.625-1.265 1.426 2.43 7.586 8.963 13.178 16.78 14.45-6.49 4.354-14.043 6.652-21.907 6.652l-2.45-.002c-.756 0-1.396.493-1.587 1.224-.19.72.16 1.48.804 1.855 8.86 5.155 18.968 7.88 29.234 7.88 8.985 0 17.39-1.782 24.983-5.298 6.96-3.224 13.11-7.832 18.28-13.696 4.817-5.463 8.582-11.77 11.193-18.746 2.49-6.65 3.805-13.743 3.805-20.516v-.322c0-1.088.49-2.11 1.35-2.808 3.256-2.644 6.092-5.756 8.428-9.25.62-.923-.352-2.08-1.367-1.63z" fill="#FFF"/><path d="M357.17 167.874c-2.185.97-4.454 1.733-6.78 2.286 2.564-2.436 4.492-5.484 5.58-8.885.31-.97-.745-1.81-1.62-1.29-3.237 1.92-6.723 3.36-10.364 4.28-.21.054-.43.082-.648.082-.664 0-1.307-.247-1.815-.693-3.872-3.413-8.854-5.292-14.024-5.292-2.24 0-4.5.348-6.717 1.036-6.873 2.132-12.176 7.8-13.84 14.796-.624 2.624-.793 5.25-.503 7.806.033.293-.105.498-.19.595-.15.17-.365.265-.585.265l-.076-.003c-.635-.06-1.265-.143-1.894-.222v56.137c4.108-.884 8.05-2.193 11.79-3.925 6.96-3.224 13.11-7.832 18.28-13.698 4.816-5.464 8.58-11.772 11.192-18.747 2.49-6.65 3.805-13.743 3.805-20.516v-.322c0-1.088.49-2.112 1.35-2.807 3.256-2.644 6.092-5.756 8.428-9.25.617-.927-.356-2.084-1.37-1.634z" fill="#E6F3FF"/><path d="M159.403 271.13v12.134h-8.89v14.84h8.89v44.095h18.263v-44.095h12.255s1.15-7.115 1.706-14.895h-13.89v-10.145c0-1.517 1.99-3.556 3.96-3.556h9.95v-15.45h-13.53c-19.165 0-18.713 14.852-18.713 17.07z" fill="#FFF"/><path d="M181.694 269.507h9.95V254.06h-13.53c-2.783 0-5.14.32-7.16.86v87.277h6.71v-44.094h12.256s1.148-7.115 1.705-14.895h-13.89v-10.145c0-1.515 1.99-3.556 3.96-3.556z" fill="#E6F3FF"/></svg>
+                </div>
+                <div class="socService">
+                    <h2>Social Media.</h2>
+                    <p>
+                        By targeting the platforms your users spend 80% of their day on, we can
+                        help you take advantage of a budding advertizing platform. Twitter, Facebook,
+                        and Instagram are only the big contenders; we also operate on linkedIn, Pinterest, Google+ and many more.
+                    </p>
+                </div>
+            </section>
+            <section class="servicesPage__web">
+                <div class="webService">
+                    <h2>Web Development. </h2>
+                    <p>
+                        We only make performant, accessibly focused, and modernly tooled websites.
+                        By using modern web techniques, your online image is professional and retentive.
+                    </p>
+                    <div class="toolsGrid">
+                        <div class="tool"><span>here</span></div>
+                        <div class="tool"><span>here</span></div>
+                        <div class="tool"><span>here</span></div>
+                        <div class="tool"><span>here</span></div>
+
+                        <div class="tool"><span>here</span></div>
+                        <div class="tool"><span>here</span></div>
+                        <div class="tool"><span>here</span></div>
+                        <div class="tool"><span>here</span></div>
+                    </div>
+                </div>
+                <div class="imgWrapR">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256" fill="#FF6838"/><path d="M111.29 390.552l120.283 120.282c8.04.76 16.186 1.166 24.427 1.166 141.385 0 256-114.615 256-256 0-17.177-1.705-33.955-4.93-50.185l-91.656-91.655L111.29 390.552z" fill="#AE4E32"/><path fill="#E0E0E0" d="M321.614 394.836H225.64l11.277-76.328h73.42"/><path fill="#C0C0C0" d="M310.337 318.508H273.5v76.328h48.114"/><path fill="#FFF" d="M131.84 114.16h283.57v214.97H131.84z"/><path fill="#E0E0E0" d="M273.5 114.16h141.91v214.97H273.5z"/><path fill="#00BAFF" d="M148.02 129.4h251.21v153.62H148.02z"/><path fill="#008CC3" d="M273.5 129.4h125.73v153.62H273.5z"/><path fill="#C0C0C0" d="M217.43 384.21h112.4v13.527h-112.4z"/><path fill="#758F9B" d="M273.5 384.21h56.33v13.527H273.5z"/><path fill="#1A1A1A" d="M111.29 259.92h79.07v130.64h-79.07z"/><path d="M149.5 259.92h40.86v130.64H149.5z"/><path fill="#35CCFF" d="M119.82 269.98h60.862v101.6H119.82z"/><path fill="#00BAFF" d="M149.5 269.98h31.18v101.6H149.5z"/><path fill="#1A1A1A" d="M293.13 195.29h149.62v198.42H293.13z"/><path d="M367.5 195.29h75.25v198.42H367.5z"/><path fill="#35CCFF" d="M309.27 210.58h115.16V364.9H309.27z"/><path fill="#00BAFF" d="M367.5 210.58h56.937V364.9H367.5z"/><path fill="#FFDC00" d="M129.25 282.21h42v24.595h-42z"/><path fill="#FFC000" d="M149.5 282.21h21.753v24.595H149.5z"/><path fill="#FFDC00" d="M324.53 225.41h84.64v24.595h-84.64z"/><path fill="#FFC000" d="M367.5 225.41h41.677v24.595H367.5z"/><path fill="#FFDC00" d="M166.55 149.91H380.7v24.595H166.55z"/><path fill="#FFC000" d="M273.5 149.91h107.2v24.595H273.5z"/></svg>
+                </div>
+            </section>
+            <section class="servicesPage__cont">
+                <div class="imgWrap">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256" fill="#FFDC00"/><path d="M512 256c0-10.084-.603-20.026-1.737-29.806L383.71 99.64 114.08 200.746v188.81l121.65 121.648c6.687.524 13.446.797 20.27.797 141.385 0 256-114.615 256-256z" fill="#FFC000"/><path fill="#333" d="M114.08 200.75h283.67v188.81H114.08z"/><path fill="#1A1A1A" d="M256 200.75h141.75v188.81H256z"/><path fill="#FFF" d="M134.41 237.66h86.12v25.632h-86.12z"/><path fill="#333" d="M392.88 147.98l-278.748 52.766-9.153-48.356 278.747-52.765z"/><path fill="#1A1A1A" d="M383.71 99.64L256 123.81V173.9l136.862-25.9"/><g fill="#FFF"><path d="M159.075 192.24l32.19-56.178-19.643 3.717-32.19 56.18M112.717 193.204l27.17-47.42-19.643 3.72-11.875 20.723"/></g><path fill="#E0E0E0" d="M344.943 157.065l19.644-3.717 22.016-38.422-2.893-15.285-6.576 1.246"/><path fill="#FFF" d="M242.644 126.338L223 130.056l-32.19 56.18 19.643-3.718"/><path fill="#E0E0E0" d="M345.4 106.89l-19.644 3.72-32.19 56.18 19.643-3.72"/><path fill="#FFF" d="M294.022 116.615l-19.644 3.717-32.19 56.18 19.643-3.718"/><path fill="#E0E0E0" d="M294.022 116.615l-19.644 3.718L256 152.406v21.492l5.83-1.104"/><path fill="#4D4D4D" d="M134.41 283.79h240.43v74.26H134.41z"/><path fill="#333" d="M256 283.79h118.85v74.26H256z"/></svg>
+                </div>
+                <div class="contService">
+                    <h2>Content Curation.</h2>
+                    <p>
+                        By targeting the platforms your users spend 80% of their day on, we can
+                        help you take advantage of a budding advertizing platform. Twitter, Facebook,
+                        and Instagram are only the big contenders; we also operate on linkedIn, Pinterest, Google+ and many more.
+                    </p>
+                </div>
+            </section>
+            <section class="servicesPage__bran">
+                <div class="branService">
+                    <h2>Branding.</h2>
+                    <p>
+                        By targeting the platforms your users spend 80% of their day on, we can
+                        help you take advantage of budding advertizing platforms. Twitter, Facebook,
+                        and Instagram are only the big contenders; we also operate on linkedIn, Pinterest, Google+ and many more.
+                    </p>
+                </div>
+                <div class="imgWrapR">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256" fill="#008CC3"/><path d="M512 256c0-2.503-.045-4.995-.117-7.48L411.567 148.204l-300.132 242.16 120.502 120.502c7.924.74 15.947 1.134 24.063 1.134 141.385 0 256-114.615 256-256z" fill="#0074A3"/><path fill="#FFF" d="M343.322 79.958H177.48v329.485h234.087v-261.24"/><path fill="#E0E0E0" d="M411.567 148.204l-68.245-68.246H283v329.485h128.567"/><g fill="#FFDC00"><path d="M343.322 148.204h68.245l-68.245-68.246M316.9 191.13h121.08v68.98H316.9z"/></g><path fill="#FFC000" d="M378 191.13h59.985v68.98H378z"/><path fill="#FFDC00" d="M111.44 277.36h245.1v113.01h-245.1z"/><path fill="#FFC000" d="M233 277.36h123.53v113.01H233z"/><g fill="#FF6838"><circle cx="351.39" cy="225.62" r="19.08"/><circle cx="214.9" cy="114.08" r="19.08"/><circle cx="144.46" cy="310.38" r="19.08"/></g></svg>
+                </div>
+            </section>
+            <section class="servicesPage__foot">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 100%" viewBox="0 0 1280 113.1911"><path d="M197.404 40.333c73.49-5.05 158.515-37.844 253.743-35.376 95.227 2.47 200.605 40.18 297.228 64.108 96.623 23.928 184.298 34.025 271.426 20.21C1106.93 75.46 1193.465 37.73 1280 0H0c61.956 22.692 123.912 45.384 197.404 40.333z" fill="#ffc262"/></svg>
+                <h2>Contact us for a customized approach. </h2>
+                <p> 
+                    While we may not directly have your solution, we've been known for 
+                    thinking outside the box.
+                </p>
+                <div class="servBtnWrap">
+                    <button id="servCont">Contact </button>
+                    <button id="servClose">Close Page</button>
+                </div>
+            </section>
+        </article>
 
         
         <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
